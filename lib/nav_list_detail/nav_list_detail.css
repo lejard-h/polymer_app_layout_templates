@@ -1,0 +1,39 @@
+:host {
+    display: block;
+}
+
+.nav {
+    border-right: 1px solid #ccc;
+}
+
+.list-panel {
+    background-color: #fafafa;
+}
+
+.list-panel {
+    --paper-header-panel-standard-container: {
+        border-right: 1px solid #ccc;
+    };
+}
+
+paper-toolbar {
+    background-color: #42A5F5;
+}
+
+.list {
+    padding: 0;
+}
+
+.list paper-item {
+    height: 80px;
+    border-bottom: 1px solid #dedede;
+    background-color: #fafafa;
+}
+
+.main-drawer-panel:not([narrow]) [list-toggle] {
+    display: none;
+}
+
+.content {
+    height: 3000px;
+}

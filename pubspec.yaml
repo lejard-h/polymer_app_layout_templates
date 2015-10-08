@@ -14,9 +14,9 @@ dependencies:
 transformers:
 - web_components:
     entry_points:
-    - test/nav-view/index.html
+    - web/index.html
 - reflectable:
     entry_points:
-    - test/nav-view/index.dart
+    - web/index.dart
 - $dart2js:
     $include: '**/*.bootstrap.initialize.dart'

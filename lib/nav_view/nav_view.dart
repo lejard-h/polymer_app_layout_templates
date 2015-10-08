@@ -2,7 +2,7 @@
  * Created by lejard_h on 08/10/15.
  */
 
-@HtmlImport("nav-view.html")
+@HtmlImport("nav_view.html")
 library polymer_app_layout.layout_nav_view;
 
 import 'package:polymer/polymer.dart';
