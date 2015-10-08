@@ -1,0 +1,26 @@
+:host {
+    display: block;
+}
+
+.nav {
+    border-right: 1px solid #ccc;
+}
+
+.main {
+    background-color: #eee;
+}
+
+paper-toolbar {
+    background-color: #42A5F5;
+}
+
+.content {
+    padding: 0 16px;
+}
+
+paper-material {
+    height: 400px;
+    max-width: 640px;
+    margin: 16px auto;
+    background-color: #fff;
+}
