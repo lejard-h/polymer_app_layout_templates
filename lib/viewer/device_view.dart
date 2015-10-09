@@ -7,6 +7,7 @@ library polymer_app_layout.layout_device_view;
 
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
+import 'package:polymer_include_element/polymer_include_element.dart';
 
 @PolymerRegister('layout-device-view')
 class LayoutDeviceView extends PolymerElement {
