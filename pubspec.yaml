@@ -4,6 +4,9 @@ description: Port of polymer-app-layout-template js to dart
 author: Hadrien Lejard <hadrien.lejard@gmail.com>
 homepage: https://github.com/lejard-h/polymer-app-layout-templates
 
+environment:
+  sdk: '>=1.8.0 <2.0.0'
+
 dependencies:
   polymer: "^1.0.0-rc.2"
   polymer_elements: "^1.0.0-rc.1"
@@ -11,7 +14,7 @@ dependencies:
   web_components: ^0.12.0
   browser: ^0.10.0
   reflectable: ^0.3.1
-  polymer_include_element: ">=0.0.1"
+  polymer_include_element: "^0.0.2"
 transformers:
 - web_components:
     entry_points:
