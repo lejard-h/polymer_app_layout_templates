@@ -1,0 +1,33 @@
+<dom-module id="device-layout-viewer">
+    <link rel="import" type="css" href="device_layout_viewer.css">
+    <template>
+        <div class="main">
+            <iron-selector class="view-select" selected="{{device}}" selected-item="{{deviceView}}"
+                           attr-for-selected="device" show-all$="{{showAll}}" device$="{{device}}">
+                <layout-device-view device="laptop" src="{{source.src}}"></layout-device-view>
+                <layout-device-view device="tablet" src="{{source.src}}" landscape></layout-device-view>
+                <layout-device-view device="phone" src="{{source.src}}"></layout-device-view>
+            </iron-selector>
+        </div>
+
+        <div class="sidebar" hidden$="{{hideSidebar}}">
+
+            <h4>Application</h4>
+            <select id="select" on-change="selectChange"></select>
+
+            <a href="{{source.github}}" target="_blank" hidden$="{{!source.github}}"><h4>Github Link</h4></a>
+
+            <h4>Device View</h4>
+            <iron-selector class="device-select" selected="{{device}}" selected-item="{{deviceIcon}}"
+                           attr-for-selected="name" show-all$="{{showAll}}" on-iron-activate="onIconActivate">
+                <iron-icon name="phone" title="Phone" icon="hardware:phone-iphone"></iron-icon>
+                <iron-icon name="tablet" title="Tablet" icon="hardware:tablet-mac" class="landscape"></iron-icon>
+                <iron-icon name="laptop" title="Laptop" icon="hardware:laptop" class="no-landscape"></iron-icon>
+            </iron-selector>
+
+            <h4>Show All Views</h4>
+            <paper-toggle-button checked="{{showAll}}"></paper-toggle-button>
+
+        </div>
+    </template>
+</dom-module>
