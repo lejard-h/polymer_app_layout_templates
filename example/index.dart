@@ -9,6 +9,8 @@ import 'package:polymer_app_layout_template/nav_view/nav_view.dart';
 import 'package:polymer_app_layout_template/nav_cards/nav_cards.dart';
 import 'package:polymer_app_layout_template/nav_list_detail/nav_list_detail.dart';
 import 'package:polymer_app_layout_template/list_card_over/list_card_over.dart';
+import 'home_page/home_page.dart';
+import 'page_one/page_one.dart';
 
 main() async {
   await initPolymer();
