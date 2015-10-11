@@ -17,7 +17,7 @@ import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
-import 'package:polymer_app_layout_template/PolymerRouteBehavior.dart';
+import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 
 @PolymerRegister('layout-list-card-over')
 class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
@@ -79,7 +79,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
     mainMode = newValue ? 'seamed' : 'cover';
     drawerWidth = newValue ? '100%' : '320px';
     toolbarClass = newValue ? '' : 'tall';
-    print(mainMode + drawerWidth + toolbarClass);
     updateStyles();
   }
 }
