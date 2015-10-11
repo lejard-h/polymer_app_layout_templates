@@ -22,7 +22,7 @@ Use the application layout templates provided and start building responsive appl
 ### Configuration
 Use [polymer_route_behavior](https://github.com/lejard-h/polymer_route_behavior) to implement routing.
 
-Only for [Left Nav + View](http://polymerelements.github.io/app-layout-templates/nav-view/index.html) and [List Left + Card over Extended Header](http://polymerelements.github.io/app-layout-templates/list-card-over/index.html)
+Only for [Left Nav + View](http://polymerelements.github.io/app-layout-templates/nav-view/index.html), Layout Nav Header and [List Left + Card over Extended Header](http://polymerelements.github.io/app-layout-templates/list-card-over/index.html)
 
 #### Example:
     
