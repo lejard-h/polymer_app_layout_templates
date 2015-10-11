@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>Polymer App Layout</title>
-
-    <link rel="import" href="packages/polymer_app_layout_template/viewer/device_layout_viewer.html">
 </head>
 
 <style>
@@ -23,12 +21,20 @@
 
 <body unresolved>
 
-<device-layout-viewer show-all sources='[
+<!--<device-layout-viewer show-all sources='[
       {"name":"Nav List Detail","src":"layout-nav-list-detail","github":"https://github.com/lejard-h/polymer_app_layout_templates/tree/master/lib/nav-list-detail"},
       {"name":"Nav View","src":"layout-nav-view","github":"https://github.com/lejard-h/polymer_app_layout_templates/tree/master/lib/nav-view"},
       {"name":"Nav Cards","src":"layout-nav-cards","github":"https://github.com/lejard-h/polymer_app_layout_templates/tree/master/lib/nav-cards"},
       {"name":"List Card Over","src":"layout-list-card-over","github":"https://github.com/lejard-h/polymer_app_layout_templates/tree/master/lib/list_card_over"}
-    ]'></device-layout-viewer>
+    ]'></device-layout-viewer>-->
+
+<layout-list-card-over config='[
+    { "name": "home", "path": "", "element": "home-page", "isDefault": true},
+    { "name": "one", "path": "one", "element": "page-one" }
+]'></layout-list-card-over>
+<!--
+<layout-nav-list-detail></layout-nav-list-detail>-->
+<!--<layout-nav-cards></layout-nav-cards>-->
 
 <script type="application/dart" src="index.dart"></script>
 </body>

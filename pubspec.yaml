@@ -1,5 +1,5 @@
 name: polymer_app_layout_template
-version: 0.0.1
+version: 0.0.2
 description: Port of polymer-app-layout-template js to dart
 author: Hadrien Lejard <hadrien.lejard@gmail.com>
 homepage: https://github.com/lejard-h/polymer-app-layout-templates
@@ -15,12 +15,13 @@ dependencies:
   browser: ^0.10.0
   reflectable: ^0.3.1
   polymer_include_element: "^0.0.2"
+  polymer_route_behavior: "^0.0.1"
 transformers:
 - web_components:
     entry_points:
-    - web/index.html
+    - example/index.html
 - reflectable:
     entry_points:
-    - web/index.dart
+    - example/index.dart
 - $dart2js:
     $include: '**/*.bootstrap.initialize.dart'

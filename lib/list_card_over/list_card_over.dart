@@ -17,40 +17,68 @@ import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
+import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 
 @PolymerRegister('layout-list-card-over')
-class LayoutListCardOver extends PolymerElement {
+class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
+  bool _isMobile;
+  String _mainMode;
+  String _drawerWidth;
+  String _toolbarClass;
 
-    bool isMobile;
-    String mainMode;
-    String drawerWidth;
-    String toolbarClass;
+  @property
+  String get toolbarClass => _toolbarClass;
 
-    LayoutListCardOver.created() : super.created();
+  @reflectable
+  set toolbarClass(String value) {
+    _toolbarClass = value;
+    notifyPath("toolbarClass", value);
+  }
 
-    PaperDrawerPanel get drawerPanel => $['drawerPanel'];
+  @property
+  String get drawerWidth => _drawerWidth;
 
-    _updateAttributes() {
-        set('isMobile', isMobile);
-        set('mainMode', mainMode);
-        set('drawerWidth', drawerWidth);
-        set('toolbarClass', toolbarClass);
-    }
+  @reflectable
+  void set drawerWidth(String value) {
+    _drawerWidth = value;
+    notifyPath("drawerWidth", value);
+  }
 
-    ready() {
-        _updateAttributes();
-    }
+  @property
+  bool get isMobile => _isMobile;
 
-    listTap(event, _) {
-       drawerPanel.closeDrawer();
-    }
+  @reflectable
+  void set isMobile(bool value) {
+    _isMobile = value;
+    notifyPath("isMobile", value);
+  }
 
-    @Observe('isMobile')
-    isMobileChanged(isMobile) {
-        mainMode = isMobile ? 'seamed' : 'cover';
-        drawerWidth = isMobile ? '100%' : '320px';
-        toolbarClass = isMobile ? '' : 'tall';
-        _updateAttributes();
-        updateStyles();
-    }
+  @property
+  String get mainMode => _mainMode;
+
+  @reflectable
+  void set mainMode(String value) {
+    _mainMode = value;
+    notifyPath("mainMode", value);
+  }
+
+  LayoutListCardOver.created() : super.created();
+
+  PaperDrawerPanel get drawerPanel => $['drawerPanel'];
+
+  ready() {
+    initRouter();
+  }
+
+  listTap(event, _) {
+    drawerPanel.closeDrawer();
+  }
+
+  @Observe("_isMobile")
+  isMobileChanged(bool newValue) {
+    mainMode = newValue ? 'seamed' : 'cover';
+    drawerWidth = newValue ? '100%' : '320px';
+    toolbarClass = newValue ? '' : 'tall';
+    updateStyles();
+  }
 }

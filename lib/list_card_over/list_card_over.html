@@ -4,6 +4,8 @@ Extended Header + List Left + Card Over Toolbar
 <dom-module id="layout-list-card-over">
     <link rel="import" type="css" href="list_card_over.css">
     <template>
+        <iron-media-query query="(max-width: 780px)" query-matches="{{_isMobile}}"></iron-media-query>
+
         <paper-drawer-panel id="drawerPanel" responsive-width="1024px" drawer-width="{{drawerWidth}}">
 
             <paper-header-panel class="list-panel" drawer mode="seamed">
@@ -12,27 +14,12 @@ Extended Header + List Left + Card Over Toolbar
                 <paper-toolbar class$="{{toolbarClass}}"></paper-toolbar>
 
                 <!-- List -->
-                <paper-menu class="list" on-iron-activate="_listTap">
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
-                    <paper-item></paper-item>
+                <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
+                    <template is="dom-repeat" items="{{config}}">
+                        <paper-item hash="{{item.path}}">
+                            <a href$="{{item.path}}">{{item.name}}</a>
+                        </paper-item>
+                    </template>
                 </paper-menu>
 
             </paper-header-panel>
@@ -45,17 +32,22 @@ Extended Header + List Left + Card Over Toolbar
 
                 <div class="content">
 
-                    <paper-material>
-                        <!-- Card Content -->
-                    </paper-material>
+                    <neon-animated-pages id="pages"
+                                         selected="{{routeIdx}}"
+                                         valueattr="hash"
+                                         class="fit">
+                        <template is="dom-repeat" items="{{config}}">
+                            <section hash="{{item.path}}" class="layout vertical">
+                                <polymer-include-element element="[[item.element]]"></polymer-include-element>
+                            </section>
+                        </template>
+                    </neon-animated-pages>
 
                 </div>
 
             </paper-header-panel>
 
         </paper-drawer-panel>
-
-        <iron-media-query query="(max-width: 780px)" query-matches="{{_isMobile}}"></iron-media-query>
 
     </template>
 </dom-module>

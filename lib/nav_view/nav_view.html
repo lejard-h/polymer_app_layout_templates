@@ -9,6 +9,13 @@ Left Nav + View
 
             <div class="nav" drawer>
                 <!-- Nav Content -->
+                <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
+                    <template is="dom-repeat" items="{{config}}">
+                        <paper-item hash="{{item.path}}">
+                            <a href$="{{item.path}}">{{item.name}}</a>
+                        </paper-item>
+                    </template>
+                </paper-menu>
             </div>
 
             <paper-header-panel class="main" main mode="waterfall">
@@ -16,10 +23,22 @@ Left Nav + View
                 <!-- Main Toolbar -->
                 <paper-toolbar>
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div class="flex">{{selectedPage.name}}</div>
                 </paper-toolbar>
 
                 <!-- Main Content -->
-                <div class="content"></div>
+                <div class="content layout horizontal fit">
+                    <neon-animated-pages id="pages"
+                                         selected="{{routeIdx}}"
+                                         valueattr="hash"
+                                         class="fit">
+                        <template is="dom-repeat" items="{{config}}">
+                            <section hash="{{item.path}}" class="layout vertical">
+                                <polymer-include-element element="[[item.element]]"></polymer-include-element>
+                            </section>
+                        </template>
+                    </neon-animated-pages>
+                </div>
 
             </paper-header-panel>
 

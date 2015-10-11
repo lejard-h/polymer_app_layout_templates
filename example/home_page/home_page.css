@@ -1,0 +1,13 @@
+:host {
+    display: block;
+}
+
+div {
+    margin: 5px;
+    padding: 10px;
+}
+
+paper-material {
+    margin: 10px;
+    background-color: white;
+}
