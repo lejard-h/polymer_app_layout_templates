@@ -17,9 +17,10 @@ import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
+import 'package:polymer_app_layout_template/PolymerRouteBehavior.dart';
 
 @PolymerRegister('layout-list-card-over')
-class LayoutListCardOver extends PolymerElement {
+class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
 
     bool isMobile;
     String mainMode;
@@ -39,6 +40,7 @@ class LayoutListCardOver extends PolymerElement {
 
     ready() {
         _updateAttributes();
+        initRouter();
     }
 
     listTap(event, _) {
