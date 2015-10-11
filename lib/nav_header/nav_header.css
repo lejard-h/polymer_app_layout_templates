@@ -1,0 +1,42 @@
+
+:host {
+    display: block;
+}
+
+.nav {
+    border-right: 1px solid #ccc;
+}
+
+.main {
+    background-color: #eee;
+}
+
+paper-toolbar {
+    background-color: #42A5F5;
+}
+
+paper-item a {
+    text-decoration: none;
+    color: currentcolor;
+    margin-left: 5px;
+}
+
+paper-tab {
+    text-decoration: none;
+    --paper-tab-ink: #42A5F5;
+   --paper-tab: #42A5F5;
+}
+
+paper-tabs {
+    --paper-tabs-selection-bar-color: #42A5F5;
+}
+
+paper-tab a {
+    text-decoration: none;
+    color: currentcolor;
+}
+
+
+section {
+    height: 100%;
+}

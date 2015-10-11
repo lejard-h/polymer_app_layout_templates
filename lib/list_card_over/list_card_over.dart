@@ -81,4 +81,11 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
     toolbarClass = newValue ? '' : 'tall';
     updateStyles();
   }
+
+  PaperDrawerPanel get drawer => $['drawerPanel'];
+
+  @reflectable
+  void menuItemClicked(event, [_]) {
+    drawer.closeDrawer();
+  }
 }

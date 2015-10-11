@@ -1,0 +1,67 @@
+<!--
+Left Nav + View
+ -->
+
+<dom-module id="layout-nav-header">
+    <link rel="import" type="css" href="nav_header.css">
+    <template>
+        <iron-media-query query="(max-width: 780px)" query-matches="{{_isMobile}}"></iron-media-query>
+        <paper-drawer-panel id="drawerPanel" force-narrow="true">
+
+            <div class="nav" drawer>
+                <!-- Nav Content -->
+                <template is="dom-if" if="{{_isMobile}}">
+                    <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
+                        <template is="dom-repeat" items="{{config}}">
+                            <paper-item hash="{{item.path}}" on-click="menuItemClicked">
+                                <a href$="{{item.path}}">{{item.name}}</a>
+                            </paper-item>
+                        </template>
+                    </paper-menu>
+                </template>
+            </div>
+
+            <paper-header-panel class="main" main mode="waterfall">
+
+                <!-- Main Toolbar -->
+                <paper-toolbar>
+                    <template is="dom-if" if="{{_isMobile}}">
+                        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    </template>
+                    <div class="flex">{{selectedPage.name}}</div>
+                </paper-toolbar>
+
+                <!-- Main Content -->
+                <div content class="layout vertical fit">
+                    <template is="dom-if" if="{{!_isMobile}}">
+                        <div class="layout horizontal">
+                            <paper-tabs id="tabs" valueattr="hash" selected="{{routeIdx}}" class="flex">
+                                <template is="dom-repeat" items="{{config}}">
+                                    <paper-tab hash="{{item.path}}">
+                                        <paper-item hash="{{item.path}}">
+                                            <a href$="{{item.path}}">{{item.name}}</a>
+                                        </paper-item>
+                                    </paper-tab>
+                                </template>
+                            </paper-tabs>
+                        </div>
+                    </template>
+                    <div class="layout horizontal flex">
+                        <neon-animated-pages id="pages"
+                                             selected="{{routeIdx}}"
+                                             valueattr="hash"
+                                             class="flex">
+                            <template is="dom-repeat" items="{{config}}">
+                                <section hash="{{item.path}}" class="layout vertical flex">
+                                    <polymer-include-element element="[[item.element]]"></polymer-include-element>
+                                </section>
+                            </template>
+                        </neon-animated-pages>
+                    </div>
+                </div>
+
+            </paper-header-panel>
+
+        </paper-drawer-panel>
+    </template>
+</dom-module>
