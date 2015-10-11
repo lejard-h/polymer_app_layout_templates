@@ -7,6 +7,7 @@ library polymer_app_layout.layout_nav_view;
 
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
+import 'dart:html';
 
 import 'package:polymer_elements/iron_icons.dart';
 import 'package:polymer_elements/paper_drawer_panel.dart';
