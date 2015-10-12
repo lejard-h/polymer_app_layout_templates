@@ -12,7 +12,7 @@ Left Nav + View
                 <!-- Nav Content -->
                 <template is="dom-if" if="{{_isMobile}}">
                     <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
-                        <template is="dom-repeat" items="{{config}}">
+                        <template is="dom-repeat" items="{{config}}" filter="isValid">
                             <paper-item hash="{{item.path}}" on-click="menuItemClicked">
                                 <a href$="{{item.path}}">{{item.name}}</a>
                             </paper-item>
@@ -36,7 +36,7 @@ Left Nav + View
                     <template is="dom-if" if="{{!_isMobile}}">
                         <div class="layout horizontal">
                             <paper-tabs id="tabs" valueattr="hash" selected="{{routeIdx}}" class="flex">
-                                <template is="dom-repeat" items="{{config}}">
+                                <template is="dom-repeat" items="{{config}}" filter="isValid">
                                     <paper-tab hash="{{item.path}}">
                                         <paper-item hash="{{item.path}}">
                                             <a href$="{{item.path}}">{{item.name}}</a>

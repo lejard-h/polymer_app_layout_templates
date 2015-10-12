@@ -10,7 +10,7 @@ Left Nav + View
             <div class="nav" drawer>
                 <!-- Nav Content -->
                 <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
-                    <template is="dom-repeat" items="{{config}}">
+                    <template is="dom-repeat" items="{{config}}" filter="isValid">
                         <paper-item hash="{{item.path}}" on-click="menuItemClicked">
                             <a href$="{{item.path}}">{{item.name}}</a>
                         </paper-item>

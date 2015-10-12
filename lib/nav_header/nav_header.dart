@@ -33,4 +33,7 @@ class LayoutNavHeader extends PolymerElement with PolymerRouteBehavior {
   void menuItemClicked(event, [_]) {
     drawer.closeDrawer();
   }
+
+  @reflectable
+  isValid(Page item) => !item.disableMenu;
 }

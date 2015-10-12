@@ -15,7 +15,7 @@ Extended Header + List Left + Card Over Toolbar
 
                 <!-- List -->
                 <paper-menu id="menu" valueattr="hash" selected="{{routeIdx}}">
-                    <template is="dom-repeat" items="{{config}}">
+                    <template is="dom-repeat" items="{{config}}" filter="isValid">
                         <paper-item hash="{{item.path}}" on-click="menuItemClicked">
                             <a href$="{{item.path}}">{{item.name}}</a>
                         </paper-item>
