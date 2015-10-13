@@ -66,10 +66,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
 
   PaperDrawerPanel get drawerPanel => $['drawerPanel'];
 
-  ready() {
-    initRouter();
-  }
-
   listTap(event, _) {
     drawerPanel.closeDrawer();
   }
@@ -89,6 +85,4 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
     drawer.closeDrawer();
   }
 
-  @reflectable
-  isValid(Page item) => !item.disableMenu;
 }

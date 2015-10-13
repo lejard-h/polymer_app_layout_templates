@@ -11,13 +11,9 @@
     background-color: #eee;
 }
 
-paper-toolbar {
-    background-color: #42A5F5;
-}
 
 paper-item a {
     text-decoration: none;
-    color: currentcolor;
     margin-left: 5px;
 }
 
