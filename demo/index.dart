@@ -11,7 +11,9 @@ import 'package:polymer_app_layout_template/nav_list_detail/nav_list_detail.dart
 import 'package:polymer_app_layout_template/list_card_over/list_card_over.dart';
 import 'package:polymer_app_layout_template/nav_header/nav_header.dart';
 import 'home_page/home_page.dart';
+import 'page_two/page_two.dart';
 import 'page_one/page_one.dart';
+import 'app/app.dart';
 
 main() async {
   await initPolymer();
