@@ -10,15 +10,13 @@ Left Nav + View
 
             <div class="nav" drawer>
                 <!-- Nav Content -->
-                <template is="dom-if" if="{{_isMobile}}">
-                    <paper-menu id="menu" valueattr="hash" selected="{{visibleMenuIdx}}">
-                        <template is="dom-repeat" items="{{visiblePagesMenu}}">
-                            <paper-item hash="{{item.path}}" on-click="menuItemClicked">
-                                <a href$="{{item.path}}">{{item.name}}</a>
-                            </paper-item>
-                        </template>
-                    </paper-menu>
-                </template>
+                <paper-menu id="menu" valueattr="hash" selected="{{visibleMenuIdx}}">
+                    <template is="dom-repeat" items="{{visiblePagesMenu}}">
+                        <paper-item hash="{{item.path}}" on-click="menuItemClicked">
+                            <a href$="{{item.path}}">{{item.name}}</a>
+                        </paper-item>
+                    </template>
+                </paper-menu>
             </div>
 
             <paper-header-panel class="main" main mode="waterfall">
