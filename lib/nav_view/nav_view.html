@@ -24,6 +24,9 @@ Left Nav + View
                 <paper-toolbar>
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                     <div class="flex">{{selectedPage.name}}</div>
+                    <template is="dom-repeat" items="{{toolbarButtons}}">
+                        <polymer-include-element element="[[item]]"></polymer-include-element>
+                    </template>
                 </paper-toolbar>
 
                 <!-- Main Content -->

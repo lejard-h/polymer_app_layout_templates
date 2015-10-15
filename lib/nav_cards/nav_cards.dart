@@ -14,8 +14,19 @@ import 'package:polymer_elements/paper_header_panel.dart';
 import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_material.dart';
+import 'package:polymer_include_element/polymer_include_element.dart';
 
 @PolymerRegister('layout-nav-cards')
 class LayoutNavCards extends PolymerElement {
     LayoutNavCards.created() : super.created();
+    List _toolbarButtons;
+
+    @property
+    List get toolbarButtons => _toolbarButtons;
+
+    @reflectable
+    set toolbarButtons(Listvalue) {
+        _toolbarButtons = value;
+        notifyPath("toolbarButtons", _toolbarButtons);
+    }
 }

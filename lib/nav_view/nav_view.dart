@@ -7,6 +7,7 @@ library polymer_app_layout.layout_nav_view;
 
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
+import "dart:html";
 
 import 'package:polymer_elements/iron_icons.dart';
 import 'package:polymer_elements/paper_drawer_panel.dart';
@@ -29,5 +30,16 @@ class LayoutNavView extends PolymerElement with PolymerRouteBehavior {
   @reflectable
   void menuItemClicked(event, [_]) {
     drawer.closeDrawer();
+  }
+
+  List _toolbarButtons;
+
+  @property
+  List get toolbarButtons => _toolbarButtons;
+
+  @reflectable
+  set toolbarButtons(Listvalue) {
+    _toolbarButtons = value;
+    notifyPath("toolbarButtons", _toolbarButtons);
   }
 }

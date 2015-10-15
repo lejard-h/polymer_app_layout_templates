@@ -15,6 +15,7 @@ import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
+import 'package:polymer_include_element/polymer_include_element.dart';
 
 @PolymerRegister('layout-nav-list-detail')
 class LayoutNavListDetail extends PolymerElement {
@@ -31,6 +32,17 @@ class LayoutNavListDetail extends PolymerElement {
     @reflectable
     listTap(event, _) {
         mainDrawerPanel.closeDrawer();
+    }
+
+    List _toolbarButtons;
+
+    @property
+    List get toolbarButtons => _toolbarButtons;
+
+    @reflectable
+    set toolbarButtons(Listvalue) {
+        _toolbarButtons = value;
+        notifyPath("toolbarButtons", _toolbarButtons);
     }
 
 }

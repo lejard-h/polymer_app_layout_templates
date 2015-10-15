@@ -28,6 +28,10 @@ Extended Header + List Left + Card Over Toolbar
                 <!-- Main Toolbar -->
                 <paper-toolbar class$="{{toolbarClass}}">
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div class="flex"></div>
+                    <template is="dom-repeat" items="{{toolbarButtons}}">
+                        <polymer-include-element element="[[item]]"></polymer-include-element>
+                    </template>
                 </paper-toolbar>
 
                 <div class="content">
