@@ -51,5 +51,6 @@ The element field accept any HtmlElement.
 
 ### Next Step
 
+- Configure toolbar
 - Define and pass parameter in path url
 - Add sub path
