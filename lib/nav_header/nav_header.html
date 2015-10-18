@@ -12,8 +12,8 @@ Left Nav + View
                 <!-- Nav Content -->
                 <paper-menu id="menu" valueattr="hash" selected="{{visibleMenuIdx}}">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
-                        <paper-item hash="{{item.path}}" on-click="menuItemClicked">
-                            <a href$="{{item.path}}">{{item.name}}</a>
+                        <paper-item hash="{{item.path}}" on-click="menuItemClicked" class="menu-item">
+                            <span>{{item.name}}</span>
                         </paper-item>
                     </template>
                 </paper-menu>
@@ -40,7 +40,7 @@ Left Nav + View
                                 <template is="dom-repeat" items="{{visiblePagesMenu}}">
                                     <paper-tab hash="{{item.path}}">
                                         <paper-item hash="{{item.path}}">
-                                            <a href$="{{item.path}}">{{item.name}}</a>
+                                            <span>{{item.name}}</span>
                                         </paper-item>
                                     </paper-tab>
                                 </template>

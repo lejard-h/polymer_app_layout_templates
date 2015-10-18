@@ -30,3 +30,7 @@ paper-tab a {
 section {
     height: 100%;
 }
+
+.menu-item {
+    cursor: pointer;
+}

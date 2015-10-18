@@ -14,23 +14,17 @@ class AppDemo extends PolymerElement {
 
     AppDemo.created() : super.created();
 
-    List<Page> _pages;
+    @property
+    List<Page> get pages => [
+        new Page("Home", "home", "home-page", isDefault: true),
+        new Page("One", "one", "page-one"),
+        new Page("Two", "two", "page-two", menu: false)
+    ];
+
 
     @property
-    List<Page> get pages => _pages;
-
-    @reflectable
-    void set pages(List<Page> value) {
-        _pages = value;
-        notifyPath('pages', value);
-    }
-
-    ready() {
-        pages = [
-            new Page("Home", "home", "home-page", isDefault: true),
-            new Page("One", "one", "page-one"),
-            new Page("Two", "two", "page-two", menu: false)
-        ];
-    }
+    List get toolbarItems => [
+        'toolbar-more-button' // or document.createElement('toolbar-more-button');
+    ];
 
 }

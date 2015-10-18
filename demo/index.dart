@@ -9,6 +9,7 @@ import 'home_page/home_page.dart';
 import 'page_two/page_two.dart';
 import 'page_one/page_one.dart';
 import 'app/app.dart';
+import 'toolbar_more_button/toolbar_more_button.dart';
 
 main() async {
   await initPolymer();
