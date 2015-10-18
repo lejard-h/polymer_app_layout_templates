@@ -19,9 +19,10 @@ import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
 import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 import 'package:polymer_include_element/polymer_include_element.dart';
+import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
 
 @PolymerRegister('layout-list-card-over')
-class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
+class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, ToolbarBehavior {
   bool _isMobile;
   String _mainMode;
   String _drawerWidth;
@@ -84,17 +85,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior {
   @reflectable
   void menuItemClicked(event, [_]) {
     drawer.closeDrawer();
-  }
-
-  List _toolbarButtons;
-
-  @property
-  List get toolbarButtons => _toolbarButtons;
-
-  @reflectable
-  set toolbarButtons(Listvalue) {
-    _toolbarButtons = value;
-    notifyPath("toolbarButtons", _toolbarButtons);
   }
 
 }

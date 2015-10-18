@@ -23,9 +23,10 @@ import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 import 'package:polymer_elements/paper_tabs.dart';
 import 'package:polymer_elements/paper_tab.dart';
 import 'package:polymer_elements/iron_media_query.dart';
+import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
 
 @PolymerRegister('layout-nav-header')
-class LayoutNavHeader extends PolymerElement with PolymerRouteBehavior {
+class LayoutNavHeader extends PolymerElement with PolymerRouteBehavior, ToolbarBehavior {
   LayoutNavHeader.created() : super.created();
 
   PaperDrawerPanel get drawer => $['drawerPanel'];
@@ -33,16 +34,5 @@ class LayoutNavHeader extends PolymerElement with PolymerRouteBehavior {
   @reflectable
   void menuItemClicked(event, [_]) {
     drawer.closeDrawer();
-  }
-
-  List _toolbarButtons;
-
-  @property
-  List get toolbarButtons => _toolbarButtons;
-
-  @reflectable
-  set toolbarButtons(Listvalue) {
-    _toolbarButtons = value;
-    notifyPath("toolbarButtons", _toolbarButtons);
   }
 }

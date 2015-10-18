@@ -20,9 +20,10 @@ import 'package:polymer_elements/paper_menu.dart';
 import 'package:polymer_include_element/polymer_include_element.dart';
 import 'package:polymer_elements/neon_animated_pages.dart';
 import 'package:polymer_route_behavior/polymer_route_behavior.dart';
+import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
 
 @PolymerRegister('layout-nav-view')
-class LayoutNavView extends PolymerElement with PolymerRouteBehavior {
+class LayoutNavView extends PolymerElement with PolymerRouteBehavior, ToolbarItems {
   LayoutNavView.created() : super.created();
 
   PaperDrawerPanel get drawer => $['drawerPanel'];
@@ -32,14 +33,4 @@ class LayoutNavView extends PolymerElement with PolymerRouteBehavior {
     drawer.closeDrawer();
   }
 
-  List _toolbarButtons;
-
-  @property
-  List get toolbarButtons => _toolbarButtons;
-
-  @reflectable
-  set toolbarButtons(Listvalue) {
-    _toolbarButtons = value;
-    notifyPath("toolbarButtons", _toolbarButtons);
-  }
 }
