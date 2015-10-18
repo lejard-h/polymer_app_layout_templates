@@ -12,5 +12,6 @@ export "nav_cards/nav_cards.dart";
 export "nav_header/nav_header.dart";
 export "nav_list_detail/nav_list_detail.dart";
 export "nav_view/nav_view.dart";
+export "layout/layout.dart";
 export "viewer/device_view.dart";
 export "viewer/device_layout_viewer.dart";

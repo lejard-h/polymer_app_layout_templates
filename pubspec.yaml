@@ -19,6 +19,8 @@ dependencies:
 dependency_overrides:
   polymer_route_behavior:
     path: /Users/lejard_h/github/polymer_route_behavior
+  polymer_include_element:
+    path: /Users/lejard_h/github/polymer_include_element
 transformers:
 - web_components:
     entry_points:
