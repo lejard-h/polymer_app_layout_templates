@@ -7,7 +7,7 @@ library polymer_app_layout.example.app_demo;
 
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
-import 'package:polymer_route_behavior/polymer_route_behavior.dart';
+import 'package:polymer_app_layout_template/app_layout.dart';
 
 @PolymerRegister('app-demo')
 class AppDemo extends PolymerElement {

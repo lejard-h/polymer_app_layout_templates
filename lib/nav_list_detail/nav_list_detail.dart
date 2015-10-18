@@ -16,9 +16,10 @@ import 'package:polymer_elements/paper_toolbar.dart';
 import 'package:polymer_elements/paper_item.dart';
 import 'package:polymer_elements/paper_menu.dart';
 import 'package:polymer_include_element/polymer_include_element.dart';
+import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
 
 @PolymerRegister('layout-nav-list-detail')
-class LayoutNavListDetail extends PolymerElement {
+class LayoutNavListDetail extends PolymerElement with ToolbarBehavior {
     LayoutNavListDetail.created() : super.created();
 
     PaperDrawerPanel get mainDrawerPanel => $['mainDrawerPanel'];
@@ -32,17 +33,6 @@ class LayoutNavListDetail extends PolymerElement {
     @reflectable
     listTap(event, _) {
         mainDrawerPanel.closeDrawer();
-    }
-
-    List _toolbarButtons;
-
-    @property
-    List get toolbarButtons => _toolbarButtons;
-
-    @reflectable
-    set toolbarButtons(Listvalue) {
-        _toolbarButtons = value;
-        notifyPath("toolbarButtons", _toolbarButtons);
     }
 
 }

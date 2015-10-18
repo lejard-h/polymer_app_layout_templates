@@ -23,7 +23,7 @@ import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
 
 @PolymerRegister('layout-nav-view')
-class LayoutNavView extends PolymerElement with PolymerRouteBehavior, ToolbarItems {
+class LayoutNavView extends PolymerElement with PolymerRouteBehavior, ToolbarBehavior {
   LayoutNavView.created() : super.created();
 
   PaperDrawerPanel get drawer => $['drawerPanel'];
