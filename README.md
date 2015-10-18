@@ -1,5 +1,5 @@
 # polymer_app_layout_templates
-Dart version of https://github.com/PolymerElements/app-layout-templates + routing
+Polymer application template with responsive Material Design and routing
 
 Application Layout Templates (Dart)
 ============================
@@ -31,19 +31,31 @@ Available for:
 
 awesome_polymer_element.dart:
 
-    import 'package:polymer_route_behavior/polymer_route_behavior.dart';
+    import 'package:polymer_app_layout_template/app_layout.dart'';
     
     ...
-    pages = [
-                new Page("Home", "home", "home-page", isDefault: true),
-                new Page("One", "one", "page-one"),
-                new Page("Two", "two", "page-two", menu: false)
-            ];
+    
+    // route
+    @property
+    List<Page> get pages => [
+        new Page("Home", "home", "home-page", isDefault: true),
+        new Page("One", "one", "page-one"),
+        new Page("Two", "two", "page-two", menu: false)
+    ];
+    
+    ...
+    
+    // toolbar
+    @property
+    List get toolbarItems => [
+        'toolbar-more-button' // or document.createElement('toolbar-more-button');
+    ];
+    
     ...
     
 awesome_polymer_element.html:
     
-    <layout-nav-header pages='{{pages}}'></layout-list-card-over>
+     <layout-app pages="{{pages}}" toolbar-items="{{toolbarItems}}" layout-type="layout-nav-header"></layout-app>
     
 The element field accept any HtmlElement.
 
@@ -51,6 +63,5 @@ The element field accept any HtmlElement.
 
 ### Next Step
 
-- Configure toolbar
 - Define and pass parameter in path url
 - Add sub path

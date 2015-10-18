@@ -1,6 +1,6 @@
 name: polymer_app_layout_template
-version: 0.0.4
-description: Port of polymer-app-layout-template js to dart
+version: 0.0.5
+description: Polymer application template with responsive Material Design and routing
 author: Hadrien Lejard <hadrien.lejard@gmail.com>
 homepage: https://github.com/lejard-h/polymer-app-layout-templates
 
