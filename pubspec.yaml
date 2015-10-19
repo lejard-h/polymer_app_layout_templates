@@ -15,7 +15,7 @@ dependencies:
   browser: ^0.10.0
   reflectable: ^0.3.1
   polymer_include_element: "^0.0.4"
-  polymer_route_behavior: "^0.0.3"
+  polymer_route_behavior: "^0.0.4"
 transformers:
 - web_components:
     entry_points:

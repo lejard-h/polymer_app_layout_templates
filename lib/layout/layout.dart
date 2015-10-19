@@ -31,8 +31,8 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   void set layoutType(String value) {
     if (_layoutIsValid(value) && value != _layoutType) {
       _layoutType = value;
-      notifyPath("layoutType", value);
       _setLayout();
+      notifyPath("layoutType", value);
     } else {}
   }
 
@@ -97,6 +97,8 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   _setLayout() {
     if (_layoutIsValid(layoutType)) {
       _layout = document.createElement(layoutType);
+      _setPages(pages);
+      _setToolbarItems(toolbarItems);
       include(_layout);
       notifyPath("layout", _layout);
     }
