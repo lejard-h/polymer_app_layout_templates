@@ -3,21 +3,6 @@
     display: block;
 }
 
-.nav {
-    border-right: 1px solid #ccc;
-}
-
-.main {
-    background-color: #eee;
-}
-
-
-paper-item a {
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-
 section {
     height: 100%;
 }

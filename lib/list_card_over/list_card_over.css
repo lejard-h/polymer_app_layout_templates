@@ -2,20 +2,6 @@
     display: block;
 }
 
-.main-panel {
-    background-color: #eee;
-}
-
-.list {
-    padding: 0;
-    border-right: 1px solid #ccc;
-}
-
-.list paper-item {
-    height: 80px;
-    border-bottom: 1px solid #dedede;
-    background-color: #fafafa;
-}
 
 .main-panel[mode=cover] .content {
     padding: 0 64px 0 4px;
@@ -30,11 +16,6 @@
 .main-panel[mode=cover] paper-material {
     max-width: 640px;
     margin: 64px auto;
-}
-
-paper-item a {
-    text-decoration: none;
-    margin-left: 5px;
 }
 
 

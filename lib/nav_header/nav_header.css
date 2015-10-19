@@ -3,27 +3,9 @@
     display: block;
 }
 
-.nav {
-    border-right: 1px solid #ccc;
-}
-
-.main {
-    background-color: #eee;
-}
-
-paper-item a {
-    text-decoration: none;
-    color: currentcolor;
-    margin-left: 5px;
-}
 
 paper-tab {
     text-decoration: none;
-}
-
-paper-tab a {
-    text-decoration: none;
-    color: currentcolor;
 }
 
 
