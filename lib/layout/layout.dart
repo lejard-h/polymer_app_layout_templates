@@ -99,7 +99,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
       _layout = document.createElement(layoutType);
       _setPages(pages);
       _setToolbarItems(toolbarItems);
-      include(_layout);
+      include(_layout, Polymer.dom(this.root));
       notifyPath("layout", _layout);
     }
   }
