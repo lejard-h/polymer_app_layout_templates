@@ -29,8 +29,10 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   @reflectable
   set navHeader(value) {
-    _navHeader = value;
-    notifyPath("navHeader", value);
+    if (value is String || value is HtmlElement) {
+      _navHeader = value;
+      notifyPath("navHeader", value);
+    }
   }
 
 
@@ -77,14 +79,8 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   }
 
   _setToolbarItems(value) {
-    if (_layout != null) {
-      if (_layout is LayoutNavHeader) {
-        (_layout as LayoutNavHeader).toolbarItems = value;
-      } else if (_layout is LayoutNavView) {
-        (_layout as LayoutNavView).toolbarItems = value;
-      } else if (_layout is LayoutListCardOver) {
-        (_layout as LayoutListCardOver).toolbarItems = value;
-      }
+    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
+      _layout.toolbarItems = value;
     }
     return _layout;
   }
@@ -92,6 +88,13 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   _setPages(value) {
     if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
         _layout.pages = value;
+    }
+    return _layout;
+  }
+
+  _setNavHeader(value) {
+    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
+      _layout.navHeader = value;
     }
     return _layout;
   }
@@ -105,6 +108,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
       _layout = document.createElement(layoutType);
       _setPages(pages);
       _setToolbarItems(toolbarItems);
+      _setNavHeader(navHeader);
       include(_layout, Polymer.dom(this.root));
       notifyPath("layout", _layout);
     }

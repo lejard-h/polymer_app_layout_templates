@@ -87,4 +87,17 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
     drawer.closeDrawer();
   }
 
+
+  var _navHeader;
+
+  @property
+  get navHeader => _navHeader;
+
+  @reflectable
+  set navHeader(value) {
+    if (value is String || value is HtmlElement) {
+      _navHeader = value;
+      notifyPath("navHeader", value);
+    }
+  }
 }

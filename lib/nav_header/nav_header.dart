@@ -35,4 +35,17 @@ class LayoutNavHeader extends PolymerElement with PolymerRouteBehavior, ToolbarB
   void menuItemClicked(event, [_]) {
     drawer.closeDrawer();
   }
+
+  var _navHeader;
+
+  @property
+  get navHeader => _navHeader;
+
+  @reflectable
+  set navHeader(value) {
+    if (value is String || value is HtmlElement) {
+      _navHeader = value;
+      notifyPath("navHeader", value);
+    }
+  }
 }
