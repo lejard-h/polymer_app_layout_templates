@@ -22,6 +22,18 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   static String get LAYOUT_LIST_CARD_OVER => "layout-list-card-over";
 
+  var _navHeader;
+
+  @property
+  get navHeader => _navHeader;
+
+  @reflectable
+  set navHeader(value) {
+    _navHeader = value;
+    notifyPath("navHeader", value);
+  }
+
+
   String _layoutType;
 
   @property
@@ -78,14 +90,8 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   }
 
   _setPages(value) {
-    if (_layout != null) {
-      if (_layout is LayoutNavHeader) {
-        (_layout as LayoutNavHeader).pages = value;
-      } else if (_layout is LayoutNavView) {
-        (_layout as LayoutNavView).pages = value;
-      } else if (_layout is LayoutListCardOver) {
-        (_layout as LayoutListCardOver).pages = value;
-      }
+    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
+        _layout.pages = value;
     }
     return _layout;
   }
