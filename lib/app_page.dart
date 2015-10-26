@@ -9,13 +9,17 @@ class AppPage extends Page {
   @reflectable
   dynamic icon;
 
-  AppPage(name, path, element, {isDefault: false, menu: true, hideLeftNav: false, icon})
-      : super(name, path, element, isDefault: isDefault, menu: menu, hideLeftNav: hideLeftNav) {
+  @reflectable
+  AppPage child;
+
+  AppPage(name, path, element, {isDefault: false, menu: true, hideLeftNav: false, icon, child: null})
+      : super(name, path, element, isDefault: isDefault, menu: menu, hideLeftNav: hideLeftNav, child: child) {
     if (icon is String || icon is HtmlElement) {
       this.icon = icon;
     } else {
       this.icon = null;
     }
+    this.child = child;
   }
 
   String toString() =>
