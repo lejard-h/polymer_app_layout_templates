@@ -35,7 +35,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     }
   }
 
-
   String _layoutType;
 
   @property
@@ -87,7 +86,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   _setPages(value) {
     if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
-        _layout.pages = value;
+      _layout.pages = value;
     }
     return _layout;
   }
@@ -99,9 +98,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     return _layout;
   }
 
-  _layoutIsValid(value) => (value == LAYOUT_NAV_VIEW ||
-      value == LAYOUT_LIST_CARD_OVER ||
-      value == LAYOUT_NAV_HEADER);
+  _layoutIsValid(value) => (value == LAYOUT_NAV_VIEW || value == LAYOUT_LIST_CARD_OVER || value == LAYOUT_NAV_HEADER);
 
   _setLayout() {
     if (_layoutIsValid(layoutType)) {
