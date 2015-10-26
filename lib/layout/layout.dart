@@ -23,6 +23,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   static String get LAYOUT_LIST_CARD_OVER => "layout-list-card-over";
 
   var _navHeader;
+  var _navFooter;
 
   @property
   get navHeader => _navHeader;
@@ -32,6 +33,16 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     if (value is String || value is HtmlElement) {
       _navHeader = value;
       notifyPath("navHeader", value);
+    }
+  }
+
+  @property
+  get navFooter => _navFooter;
+
+  set navFooter(value) {
+    if (value is String || value is HtmlElement) {
+      _navFooter = value;
+      notifyPath("navFooter", value);
     }
   }
 
@@ -54,14 +65,14 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   @property
   HtmlElement get layout => _layout;
 
-  List<Page> _pages;
+  List<AppPage> _pages;
   List _toolbarItems;
 
   @property
-  List<Page> get pages => _pages;
+  List<AppPage> get pages => _pages;
 
   @reflectable
-  set pages(List<Page> value) {
+  set pages(List<AppPage> value) {
     _pages = value;
     notifyPath("pages", value);
     _setPages(value);
@@ -98,6 +109,13 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     return _layout;
   }
 
+  _setNavFooter(value) {
+    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
+      _layout.navFooter = value;
+    }
+    return _layout;
+  }
+
   _layoutIsValid(value) => (value == LAYOUT_NAV_VIEW || value == LAYOUT_LIST_CARD_OVER || value == LAYOUT_NAV_HEADER);
 
   _setLayout() {
@@ -106,6 +124,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
       _setPages(pages);
       _setToolbarItems(toolbarItems);
       _setNavHeader(navHeader);
+      _setNavFooter(navFooter);
       include(_layout, Polymer.dom(this.root));
       notifyPath("layout", _layout);
     }

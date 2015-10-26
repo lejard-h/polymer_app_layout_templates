@@ -9,10 +9,10 @@ Left Nav + View
 
         <paper-drawer-panel force-narrow="true" id="drawerPanel">
 
-            <div class="nav" drawer id="nav">
+            <div class="nav layout vertical" drawer id="nav">
                 <!-- Nav Content -->
                 <polymer-include-element element="[[navHeader]]"></polymer-include-element>
-                <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash">
+                <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash" class="flex">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
                         <paper-item class="menu-item" hash="{{item.path}}" on-click="menuItemClicked">
                             <span class="layout horizontal">
@@ -27,6 +27,7 @@ Left Nav + View
                         </paper-item>
                     </template>
                 </paper-menu>
+                <polymer-include-element element="[[navFooter]]"></polymer-include-element>
             </div>
 
             <paper-header-panel class="main" main mode="waterfall">

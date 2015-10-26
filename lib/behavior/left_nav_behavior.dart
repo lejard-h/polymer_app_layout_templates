@@ -12,6 +12,7 @@ import '../app_layout.dart';
 @behavior
 abstract class LeftNavBehavior {
   var _navHeader;
+  var _navFooter;
   HtmlElement get nav => $['nav'];
   PaperDrawerPanel get drawer => $['drawerPanel'];
 
@@ -22,6 +23,16 @@ abstract class LeftNavBehavior {
     if (value is String || value is HtmlElement) {
       _navHeader = value;
       notifyPath("navHeader", value);
+    }
+  }
+
+  @property
+  get navFooter => _navFooter;
+
+  set navFooter(value) {
+    if (value is String || value is HtmlElement) {
+      _navFooter = value;
+      notifyPath("navFooter", value);
     }
   }
 

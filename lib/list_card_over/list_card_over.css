@@ -16,7 +16,6 @@
 }
 section {
     height: 100%;
-    z-index: 1;
 }
 .menu-item {
     cursor: pointer;
