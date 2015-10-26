@@ -5,9 +5,16 @@
 
 section {
     height: 100%;
-    z-index: 1;
 }
 
 .menu-item {
     cursor: pointer;
+}
+
+iron-icon {
+    margin-right: 16px;
+}
+
+#drawer {
+    z-index: 2 !important;
 }

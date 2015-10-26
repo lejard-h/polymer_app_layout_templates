@@ -3,29 +3,45 @@ Left Nav + View
  -->
 
 <dom-module id="layout-nav-header">
-    <link rel="import" type="css" href="nav_header.css">
+    <link href="nav_header.css" rel="import" type="css">
     <template>
-        <iron-media-query query="(max-width: 780px)" query-matches="{{_isMobile}}"></iron-media-query>
-        <paper-drawer-panel id="drawerPanel" force-narrow="true">
+        <iron-media-query query-matches="{{_isMobile}}" query="(max-width: 780px)"></iron-media-query>
 
-            <div class="nav" drawer>
+        <paper-drawer-panel force-narrow="true" id="drawerPanel">
+
+            <div class="nav layout vertical" drawer id="nav">
                 <!-- Nav Content -->
                 <polymer-include-element element="[[navHeader]]"></polymer-include-element>
-                <paper-menu id="menu" valueattr="hash" selected="{{visibleMenuIdx}}">
+                <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash" class="flex">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
-                        <paper-item hash="{{item.path}}" on-click="menuItemClicked" class="menu-item">
-                            <span>{{item.name}}</span>
+                        <paper-item class="menu-item" hash="{{item.path}}" on-click="menuItemClicked">
+                            <span class="layout horizontal">
+                                <template if="{{ isIconString(item)}}" is="dom-if">
+                                    <iron-icon icon="{{item.icon}}"></paper-icon-button>
+                                </template>
+                                <template if="{{ isIconHtmlElement(item)}}" is="dom-if">
+                                    <polymer-include-element element="[[item.icon]]"></polymer-include-element>
+                                </template>
+                                <span class="flex">{{item.name}}</span>
+                            </span>
                         </paper-item>
                     </template>
                 </paper-menu>
+                <polymer-include-element element="[[navFooter]]"></polymer-include-element>
             </div>
 
             <paper-header-panel class="main" main mode="waterfall">
 
                 <!-- Main Toolbar -->
                 <paper-toolbar>
-                    <template is="dom-if" if="{{_isMobile}}">
+                    <template if="{{_isMobile}}" is="dom-if">
                         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    </template>
+                    <template if="{{ isIconString(selectedPage)}}" is="dom-if">
+                        <iron-icon icon="{{selectedPage.icon}}"></paper-icon-button>
+                    </template>
+                    <template if="{{ isIconHtmlElement(selectedPage)}}" is="dom-if">
+                        <polymer-include-element element="[[selectedPage.icon]]"></polymer-include-element>
                     </template>
                     <div class="flex">{{selectedPage.name}}</div>
                     <template is="dom-repeat" items="{{toolbarItems}}">
@@ -34,13 +50,19 @@ Left Nav + View
                 </paper-toolbar>
 
                 <!-- Main Content -->
-                <div content class="layout vertical fit">
-                    <template is="dom-if" if="{{!_isMobile}}">
+                <div class="layout vertical fit" content>
+                    <template if="{{!_isMobile}}" is="dom-if">
                         <div class="layout horizontal">
-                            <paper-tabs id="tabs" valueattr="hash" selected="{{visibleMenuIdx}}" class="flex">
+                            <paper-tabs class="flex" id="tabs" selected="{{visibleMenuIdx}}" valueattr="hash">
                                 <template is="dom-repeat" items="{{visiblePagesMenu}}">
                                     <paper-tab hash="{{item.path}}">
                                         <paper-item hash="{{item.path}}">
+                                            <template if="{{ isIconString(item)}}" is="dom-if">
+                                                <iron-icon icon="{{item.icon}}"></paper-icon-button>
+                                            </template>
+                                            <template if="{{ isIconHtmlElement(item)}}" is="dom-if">
+                                                <polymer-include-element element="[[item.icon]]"></polymer-include-element>
+                                            </template>
                                             <span>{{item.name}}</span>
                                         </paper-item>
                                     </paper-tab>
@@ -49,12 +71,9 @@ Left Nav + View
                         </div>
                     </template>
                     <div class="layout horizontal flex">
-                        <neon-animated-pages id="pages"
-                                             selected="{{routeIdx}}"
-                                             valueattr="hash"
-                                             class="flex">
+                        <neon-animated-pages class="flex" id="pages" selected="{{routeIdx}}" valueattr="hash">
                             <template is="dom-repeat" items="{{config}}">
-                                <section hash="{{item.path}}" class="layout vertical flex">
+                                <section class="layout vertical flex" hash="{{item.path}}">
                                     <polymer-include-element element="[[item.element]]"></polymer-include-element>
                                 </section>
                             </template>

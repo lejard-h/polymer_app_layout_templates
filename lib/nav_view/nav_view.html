@@ -3,27 +3,42 @@ Left Nav + View
  -->
 
 <dom-module id="layout-nav-view">
-    <link rel="import" type="css" href="nav_view.css">
+    <link href="nav_view.css" rel="import" type="css">
     <template>
-        <paper-drawer-panel id="drawerPanel" responsive-width="1280px">
+        <paper-drawer-panel id="drawerPanel" responsive-width="1280px" visible-nav$="{{!selectedPage.hideLeftNav}}">
 
-            <div class="nav" drawer>
+            <div class="nav layout vertical" drawer id="nav">
                 <!-- Nav Content -->
                 <polymer-include-element element="[[navHeader]]"></polymer-include-element>
-                <paper-menu id="menu" valueattr="hash" selected="{{visibleMenuIdx}}">
+                <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash" class="flex">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
-                        <paper-item hash="{{item.path}}" on-click="menuItemClicked" class="menu-item">
-                            <span>{{item.name}}</span>
+                        <paper-item class="menu-item" hash="{{item.path}}" on-click="menuItemClicked">
+                            <span class="layout horizontal">
+                                <template if="{{ isIconString(item)}}" is="dom-if">
+                                    <iron-icon icon="{{item.icon}}"></paper-icon-button>
+                                </template>
+                                <template if="{{ isIconHtmlElement(item)}}" is="dom-if">
+                                    <polymer-include-element element="[[item.icon]]"></polymer-include-element>
+                                </template>
+                                <span class="flex">{{item.name}}</span>
+                            </span>
                         </paper-item>
                     </template>
                 </paper-menu>
+                <polymer-include-element element="[[navFooter]]"></polymer-include-element>
             </div>
 
-            <paper-header-panel class="main" main mode="waterfall">
+            <paper-header-panel class="main" main mode="waterfall" style="z-index: 0">
 
                 <!-- Main Toolbar -->
                 <paper-toolbar>
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <template if="{{ isIconString(selectedPage)}}" is="dom-if">
+                        <iron-icon icon="{{selectedPage.icon}}"></paper-icon-button>
+                    </template>
+                    <template if="{{ isIconHtmlElement(selectedPage)}}" is="dom-if">
+                        <polymer-include-element element="[[selectedPage.icon]]"></polymer-include-element>
+                    </template>
                     <div class="flex">{{selectedPage.name}}</div>
                     <template is="dom-repeat" items="{{toolbarItems}}">
                         <polymer-include-element element="[[item]]"></polymer-include-element>
@@ -32,12 +47,9 @@ Left Nav + View
 
                 <!-- Main Content -->
                 <div class="content layout horizontal fit">
-                    <neon-animated-pages id="pages"
-                                         selected="{{routeIdx}}"
-                                         valueattr="hash"
-                                         class="fit">
+                    <neon-animated-pages class="fit" id="pages" selected="{{routeIdx}}" valueattr="hash">
                         <template is="dom-repeat" items="{{config}}">
-                            <section hash="{{item.path}}" class="layout vertical">
+                            <section class="layout vertical" hash="{{item.path}}">
                                 <polymer-include-element element="[[item.element]]"></polymer-include-element>
                             </section>
                         </template>

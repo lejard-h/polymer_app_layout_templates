@@ -5,24 +5,19 @@
 @HtmlImport("list_card_over.html")
 library polymer_app_layout.layout_list_card_over;
 
+import "dart:html";
+
 import 'package:polymer/polymer.dart';
+import 'package:polymer_app_layout_template/app_layout.dart';
+import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
+import 'package:polymer_app_layout_template/behavior/left_nav_behavior.dart';
+import 'package:polymer_app_layout_template/behavior/icon_behavior.dart';
+import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
 
-import 'package:polymer_elements/iron_icons.dart';
-import 'package:polymer_elements/iron_media_query.dart';
-import 'package:polymer_elements/paper_material.dart';
-import 'package:polymer_elements/paper_drawer_panel.dart';
-import 'package:polymer_elements/paper_header_panel.dart';
-import 'package:polymer_elements/paper_icon_button.dart';
-import 'package:polymer_elements/paper_toolbar.dart';
-import 'package:polymer_elements/paper_item.dart';
-import 'package:polymer_elements/paper_menu.dart';
-import 'package:polymer_route_behavior/polymer_route_behavior.dart';
-import 'package:polymer_include_element/polymer_include_element.dart';
-import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
-
 @PolymerRegister('layout-list-card-over')
-class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, ToolbarBehavior {
+class LayoutListCardOver extends PolymerElement
+    with PolymerRouteBehavior, ToolbarBehavior, LeftNavBehavior, IconBehavior {
   bool _isMobile;
   String _mainMode;
   String _drawerWidth;
@@ -31,7 +26,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
   @property
   String get toolbarClass => _toolbarClass;
 
-  @reflectable
   set toolbarClass(String value) {
     _toolbarClass = value;
     notifyPath("toolbarClass", value);
@@ -40,7 +34,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
   @property
   String get drawerWidth => _drawerWidth;
 
-  @reflectable
   void set drawerWidth(String value) {
     _drawerWidth = value;
     notifyPath("drawerWidth", value);
@@ -49,7 +42,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
   @property
   bool get isMobile => _isMobile;
 
-  @reflectable
   void set isMobile(bool value) {
     _isMobile = value;
     notifyPath("isMobile", value);
@@ -58,7 +50,6 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
   @property
   String get mainMode => _mainMode;
 
-  @reflectable
   void set mainMode(String value) {
     _mainMode = value;
     notifyPath("mainMode", value);
@@ -78,26 +69,5 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
     drawerWidth = newValue ? '100%' : '320px';
     toolbarClass = newValue ? '' : 'tall';
     updateStyles();
-  }
-
-  PaperDrawerPanel get drawer => $['drawerPanel'];
-
-  @reflectable
-  void menuItemClicked(event, [_]) {
-    drawer.closeDrawer();
-  }
-
-
-  var _navHeader;
-
-  @property
-  get navHeader => _navHeader;
-
-  @reflectable
-  set navHeader(value) {
-    if (value is String || value is HtmlElement) {
-      _navHeader = value;
-      notifyPath("navHeader", value);
-    }
   }
 }

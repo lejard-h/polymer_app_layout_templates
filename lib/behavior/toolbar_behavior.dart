@@ -8,15 +8,14 @@ import 'package:polymer/polymer.dart';
 
 @behavior
 abstract class ToolbarBehavior {
+  List _toolbarItems;
 
-    List _toolbarItems;
+  @property
+  List get toolbarItems => _toolbarItems;
 
-    @property
-    List get toolbarItems => _toolbarItems;
-
-    @reflectable
-    set toolbarItems(List value) {
-        _toolbarItems = value;
-        notifyPath("toolbarItems", _toolbarItems);
-    }
+  @reflectable
+  set toolbarItems(List value) {
+    _toolbarItems = value;
+    notifyPath("toolbarItems", _toolbarItems);
+  }
 }
