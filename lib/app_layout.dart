@@ -22,6 +22,8 @@ export 'package:polymer_route_behavior/polymer_route_behavior.dart';
 
 export "app_page.dart";
 export "behavior/toolbar_behavior.dart";
+export "behavior/left_nav_behavior.dart";
+export "behavior/icon_behavior.dart";
 export "layout/layout.dart";
 export "list_card_over/list_card_over.dart";
 export "nav_cards/nav_cards.dart";

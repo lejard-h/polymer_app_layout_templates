@@ -10,11 +10,14 @@ import "dart:html";
 import 'package:polymer/polymer.dart';
 import 'package:polymer_app_layout_template/app_layout.dart';
 import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
+import 'package:polymer_app_layout_template/behavior/left_nav_behavior.dart';
+import 'package:polymer_app_layout_template/behavior/icon_behavior.dart';
 import 'package:polymer_route_behavior/polymer_route_behavior.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
 
 @PolymerRegister('layout-list-card-over')
-class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, ToolbarBehavior {
+class LayoutListCardOver extends PolymerElement
+    with PolymerRouteBehavior, ToolbarBehavior, LeftNavBehavior, IconBehavior {
   bool _isMobile;
   String _mainMode;
   String _drawerWidth;
@@ -66,55 +69,5 @@ class LayoutListCardOver extends PolymerElement with PolymerRouteBehavior, Toolb
     drawerWidth = newValue ? '100%' : '320px';
     toolbarClass = newValue ? '' : 'tall';
     updateStyles();
-  }
-
-  PaperDrawerPanel get drawer => $['drawerPanel'];
-
-  @reflectable
-  void menuItemClicked(event, [_]) {
-    drawer.closeDrawer();
-  }
-
-  var _navHeader;
-
-  @property
-  get navHeader => _navHeader;
-
-  set navHeader(value) {
-    if (value is String || value is HtmlElement) {
-      _navHeader = value;
-      notifyPath("navHeader", value);
-    }
-  }
-
-  @reflectable
-  bool isIconString(AppPage page) {
-    try {
-      return page.icon is String;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  @reflectable
-  bool isIconHtmlElement(AppPage page) {
-    try {
-      return page.icon is HtmlElement;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  HtmlElement get nav => $['nav'];
-
-  @Observe("selectedPage")
-  selectedPageChanged(Page newValue) {
-    if (nav.parent != null) {
-      if (newValue.hideLeftNav) {
-        nav.parent.style.setProperty("display", "none");
-      } else {
-        nav.parent.style.setProperty("display", "block");
-      }
-    }
   }
 }
