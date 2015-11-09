@@ -1,9 +1,9 @@
-library polymer_app_layout.app_page;
+library polymer_app_layout.models.app_page;
 
 import "dart:html";
 
 import "package:polymer/polymer.dart";
-import "package:polymer_route_behavior/polymer_route_behavior.dart";
+import "page.dart";
 
 class AppPage extends Page {
   @reflectable

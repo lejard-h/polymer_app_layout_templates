@@ -3,14 +3,19 @@
  */
 
 @HtmlImport("layout.html")
-library polymer_app_layout.layout_app;
+library polymer_app_layout.elements.layout_app;
 
 import 'package:polymer/polymer.dart';
-import 'package:web_components/web_components.dart' show HtmlImport;
-import "dart:html";
+import 'package:polymer_app_layout_template/models/models.dart';
+import 'package:polymer_app_layout_template/behaviors/behaviors.dart';
+import 'package:polymer_app_layout_template/elements/elements.dart';
 
-import 'package:polymer_include_element/polymer_include_element_behavior.dart';
-import 'package:polymer_app_layout_template/app_layout.dart';
+import "package:polymer_app_layout_template/elements/layout/layout.dart";
+import "package:polymer_app_layout_template/elements/list_card_over/list_card_over.dart";
+import "package:polymer_app_layout_template/elements/nav_header/nav_header.dart";
+import "package:polymer_app_layout_template/elements/nav_view/nav_view.dart";
+
+import 'package:web_components/web_components.dart' show HtmlImport;
 
 @PolymerRegister('layout-app')
 class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {

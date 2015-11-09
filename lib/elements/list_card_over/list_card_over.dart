@@ -3,16 +3,11 @@
  */
 
 @HtmlImport("list_card_over.html")
-library polymer_app_layout.layout_list_card_over;
-
-import "dart:html";
+library polymer_app_layout.elements.layout_list_card_over;
 
 import 'package:polymer/polymer.dart';
-import 'package:polymer_app_layout_template/app_layout.dart';
-import 'package:polymer_app_layout_template/behavior/toolbar_behavior.dart';
-import 'package:polymer_app_layout_template/behavior/left_nav_behavior.dart';
-import 'package:polymer_app_layout_template/behavior/icon_behavior.dart';
-import 'package:polymer_route_behavior/polymer_route_behavior.dart';
+import 'package:polymer_app_layout_template/behaviors/behaviors.dart';
+import 'package:polymer_app_layout_template/elements/elements.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
 
 @PolymerRegister('layout-list-card-over')

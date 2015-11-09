@@ -2,12 +2,12 @@
  * Created by lejard_h on 18/10/15.
  */
 
-library polymer_app_layout.icon_behavior;
+library polymer_app_layout.behaviors.icon_behavior;
 
 import "dart:html";
 
 import 'package:polymer/polymer.dart';
-import '../app_layout.dart';
+import "package:polymer_app_layout_template/models/models.dart";
 
 @behavior
 abstract class IconBehavior {
