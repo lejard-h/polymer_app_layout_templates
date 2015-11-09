@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>deleteFromDocument method - Selection class - polymer_app_layout library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the deleteFromDocument method from the Selection class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+                <li><a href="polymer_app_layout/Selection-class.html">Selection</a></li>
+                <li class="self-crumb">deleteFromDocument</li>
+            </ol>
+            <div class="self-name">deleteFromDocument</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+            <li><a href="polymer_app_layout/Selection-class.html">Selection</a></li>
+            <li class="self-crumb">deleteFromDocument</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> deleteFromDocument
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout/Selection/deleteFromDocument.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></h5>
+    <h5><a href="polymer_app_layout/Selection-class.html">Selection</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/Selection-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout/Selection/anchorNode.html">anchorNode</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/anchorOffset.html">anchorOffset</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/baseNode.html">baseNode</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/baseOffset.html">baseOffset</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/extentNode.html">extentNode</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/extentOffset.html">extentOffset</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/focusNode.html">focusNode</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/focusOffset.html">focusOffset</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/isCollapsed.html">isCollapsed</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/rangeCount.html">rangeCount</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/type.html">type</a>
+</li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/Selection-class.html#methods">Methods</a></li>
+      <li><a href="polymer_app_layout/Selection/addRange.html">addRange</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/collapse.html">collapse</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/collapseToEnd.html">collapseToEnd</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/collapseToStart.html">collapseToStart</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/containsNode.html">containsNode</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/deleteFromDocument.html">deleteFromDocument</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/empty.html">empty</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/extend.html">extend</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/getRangeAt.html">getRangeAt</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/modify.html">modify</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/removeAllRanges.html">removeAllRanges</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/selectAllChildren.html">selectAllChildren</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/setBaseAndExtent.html">setBaseAndExtent</a>
+</li>
+      <li><a href="polymer_app_layout/Selection/setPosition.html">setPosition</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <div>
+                <ol class="comma-separated metadata-annotations">
+                    <li class="metadata-annotation">@DomName(&apos;Selection.deleteFromDocument&apos;)</li>
+                    <li class="metadata-annotation">@DocsEditable()</li>
+                </ol>
+            </div>
+            <span class="returntype">void</span>
+            <span class="name ">deleteFromDocument</span>(
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@DomName(&apos;Selection.deleteFromDocument&apos;)
+@DocsEditable()
+void deleteFromDocument() =&gt; _blink.BlinkSelection.instance.deleteFromDocument_Callback_0_(unwrap_jso(this));</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

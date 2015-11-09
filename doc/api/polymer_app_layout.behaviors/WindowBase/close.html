@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>close method - WindowBase class - polymer_app_layout.behaviors library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the close method from the WindowBase class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+                <li><a href="polymer_app_layout.behaviors/WindowBase-class.html">WindowBase</a></li>
+                <li class="self-crumb">close</li>
+            </ol>
+            <div class="self-name">close</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+            <li><a href="polymer_app_layout.behaviors/WindowBase-class.html">WindowBase</a></li>
+            <li class="self-crumb">close</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> close
+            </h1>
+            <!-- p class="subtitle">
+                Closes the window.
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout.behaviors/WindowBase/close.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/WindowBase-class.html">WindowBase</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/WindowBase-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/closed.html">closed</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/history.html">history</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/location.html">location</a>
+</li>
+      <li>on
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/opener.html">opener</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/parent.html">parent</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/top.html">top</a>
+</li>
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/WindowBase-class.html#constructors">Constructors</a></li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/WindowBase.html">WindowBase</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/WindowBase-class.html#methods">Methods</a></li>
+      <li>addEventListener
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/close.html">close</a>
+</li>
+      <li>dispatchEvent
+</li>
+      <li><a href="polymer_app_layout.behaviors/WindowBase/postMessage.html">postMessage</a>
+</li>
+      <li>removeEventListener
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">void</span>
+            <span class="name ">close</span>(
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Closes the window.</p>
+<p>This method should only succeed if the <a href="polymer_app_layout/WindowBase-class.html">WindowBase</a> object is
+<strong>script-closeable</strong> and the window calling <a href="polymer_app_layout/WindowBase/close.html">close</a> is allowed to navigate
+the window.</p>
+<p>A window is script-closeable if it is either a window
+that was opened by another window, or if it is a window with only one
+document in its history.</p>
+<p>A window might not be allowed to navigate, and therefore close, another
+window due to browser security features.</p>
+<pre><code class="prettyprint lang-dart">var other = window.open('http://www.example.com', 'foo');
+// Closes other window, as it is script-closeable.
+other.close();
+print(other.closed()); // 'true'
+
+window.location('http://www.mysite.com', 'foo');
+// Does not close this window, as the history has changed.
+window.close();
+print(window.closed()); // 'false'
+</code></pre>
+<p>See also:</p><ul><li><a href="http://www.w3.org/TR/html5/browsers.html#dom-window-close">Window close discussion</a> from the W3C</li></ul>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/**
+ * Closes the window.
+ *
+ * This method should only succeed if the [WindowBase] object is
+ * **script-closeable** and the window calling [close] is allowed to navigate
+ * the window.
+ *
+ * A window is script-closeable if it is either a window
+ * that was opened by another window, or if it is a window with only one
+ * document in its history.
+ *
+ * A window might not be allowed to navigate, and therefore close, another
+ * window due to browser security features.
+ *
+ *     var other = window.open(&apos;http://www.example.com&apos;, &apos;foo&apos;);
+ *     // Closes other window, as it is script-closeable.
+ *     other.close();
+ *     print(other.closed()); // &apos;true&apos;
+ *
+ *     window.location(&apos;http://www.mysite.com&apos;, &apos;foo&apos;);
+ *     // Does not close this window, as the history has changed.
+ *     window.close();
+ *     print(window.closed()); // &apos;false&apos;
+ *
+ * See also:
+ *
+ * * [Window close discussion](http://www.w3.org/TR/html5/browsers.html#dom-window-close) from the W3C
+ */
+void close();</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

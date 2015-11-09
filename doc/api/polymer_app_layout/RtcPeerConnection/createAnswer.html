@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>createAnswer method - RtcPeerConnection class - polymer_app_layout library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the createAnswer method from the RtcPeerConnection class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+                <li><a href="polymer_app_layout/RtcPeerConnection-class.html">RtcPeerConnection</a></li>
+                <li class="self-crumb">createAnswer</li>
+            </ol>
+            <div class="self-name">createAnswer</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+            <li><a href="polymer_app_layout/RtcPeerConnection-class.html">RtcPeerConnection</a></li>
+            <li class="self-crumb">createAnswer</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> createAnswer
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout/RtcPeerConnection/createAnswer.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></h5>
+    <h5><a href="polymer_app_layout/RtcPeerConnection-class.html">RtcPeerConnection</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="polymer_app_layout/RtcPeerConnection-class.html#constants">Constants</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/addStreamEvent.html">addStreamEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/dataChannelEvent.html">dataChannelEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/iceCandidateEvent.html">iceCandidateEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/iceConnectionStateChangeEvent.html">iceConnectionStateChangeEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/negotiationNeededEvent.html">negotiationNeededEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/removeStreamEvent.html">removeStreamEvent</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/signalingStateChangeEvent.html">signalingStateChangeEvent</a></li>
+    
+      <li class="section-title"><a href="polymer_app_layout/RtcPeerConnection-class.html#static-properties">Static properties</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/supported.html">supported</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/RtcPeerConnection-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/iceConnectionState.html">iceConnectionState</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/iceGatheringState.html">iceGatheringState</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/localDescription.html">localDescription</a>
+</li>
+      <li>on
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onAddStream.html">onAddStream</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onDataChannel.html">onDataChannel</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onIceCandidate.html">onIceCandidate</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onIceConnectionStateChange.html">onIceConnectionStateChange</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onNegotiationNeeded.html">onNegotiationNeeded</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onRemoveStream.html">onRemoveStream</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/onSignalingStateChange.html">onSignalingStateChange</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/remoteDescription.html">remoteDescription</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/signalingState.html">signalingState</a>
+</li>
+    
+      <li class="section-title"><a href="polymer_app_layout/RtcPeerConnection-class.html#constructors">Constructors</a></li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/RtcPeerConnection.html">RtcPeerConnection</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/RtcPeerConnection-class.html#methods">Methods</a></li>
+      <li>addEventListener
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/addIceCandidate.html">addIceCandidate</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/addStream.html">addStream</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/close.html">close</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/createAnswer.html">createAnswer</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/createDataChannel.html">createDataChannel</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/createDtmfSender.html">createDtmfSender</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/createOffer.html">createOffer</a>
+</li>
+      <li>dispatchEvent
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/getLocalStreams.html">getLocalStreams</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/getRemoteStreams.html">getRemoteStreams</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/getStats.html">getStats</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/getStreamById.html">getStreamById</a>
+</li>
+      <li>removeEventListener
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/removeStream.html">removeStream</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/setLocalDescription.html">setLocalDescription</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/setRemoteDescription.html">setRemoteDescription</a>
+</li>
+      <li><a href="polymer_app_layout/RtcPeerConnection/updateIce.html">updateIce</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Future&lt;<a href="dart-html/RtcSessionDescription-class.html">RtcSessionDescription</a>&gt;</span>
+            <span class="name ">createAnswer</span>(
+            <br>
+            <div class="parameters">
+                [<span class="parameter" id="createAnswer-param-mediaConstraints"><span class="type-annotation">Map</span> <span class="parameter-name">mediaConstraints</span></span>]
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;RtcSessionDescription&gt; createAnswer([Map mediaConstraints]) {
+  var completer = new Completer&lt;RtcSessionDescription&gt;();
+  _createAnswer(
+      (value) { completer.complete(value); },
+      (error) { completer.completeError(error); }, mediaConstraints);
+  return completer.future;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

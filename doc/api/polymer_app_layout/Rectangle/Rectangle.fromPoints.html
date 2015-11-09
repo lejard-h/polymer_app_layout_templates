@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+                <li><a href="polymer_app_layout/Rectangle-class.html">Rectangle</a></li>
+                <li class="self-crumb">Rectangle.fromPoints</li>
+            </ol>
+            <div class="self-name">Rectangle.fromPoints</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+            <li><a href="polymer_app_layout/Rectangle-class.html">Rectangle</a></li>
+            <li class="self-crumb">Rectangle.fromPoints</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">constructor</div> Rectangle.fromPoints
+            </h1>
+            <!-- p class="subtitle">
+                Create a rectangle spanned by the points <code class="prettyprint lang-dart">a</code> and <code class="prettyprint lang-dart">b</code>;
+            </p -->
+        </div>
+        <ul class="subnav">
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></h5>
+    <h5><a href="polymer_app_layout/Rectangle-class.html">Rectangle</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/Rectangle-class.html#instance-properties">Properties</a></li>
+      <li>bottom
+</li>
+      <li>bottomLeft
+</li>
+      <li>bottomRight
+</li>
+      <li>hashCode
+</li>
+      <li><a href="polymer_app_layout/Rectangle/height.html">height</a>
+</li>
+      <li><a href="polymer_app_layout/Rectangle/left.html">left</a>
+</li>
+      <li>right
+</li>
+      <li><a href="polymer_app_layout/Rectangle/top.html">top</a>
+</li>
+      <li>topLeft
+</li>
+      <li>topRight
+</li>
+      <li><a href="polymer_app_layout/Rectangle/width.html">width</a>
+</li>
+    
+      <li class="section-title"><a href="polymer_app_layout/Rectangle-class.html#constructors">Constructors</a></li>
+      <li><a href="polymer_app_layout/Rectangle/Rectangle.html">Rectangle</a></li>
+      <li><a href="polymer_app_layout/Rectangle/Rectangle.fromPoints.html">fromPoints</a></li>
+    
+      <li class="section-title"><a href="polymer_app_layout/Rectangle-class.html#operators">Operators</a></li>
+      <li>operator ==
+</li>
+    
+      <li class="section-title"><a href="polymer_app_layout/Rectangle-class.html#methods">Methods</a></li>
+      <li>boundingBox
+</li>
+      <li>containsPoint
+</li>
+      <li>containsRectangle
+</li>
+      <li>intersection
+</li>
+      <li>intersects
+</li>
+      <li>toString
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+        
+                <span class="name ">Rectangle.fromPoints</span>(
+        <br>
+        <div class="parameters">
+            <span class="parameter" id="fromPoints-param-a"><span class="type-annotation"><a href="polymer_app_layout/Point-class.html">Point</a>&lt;T&gt;</span> <span class="parameter-name">a</span></span>,<br><span class="parameter" id="fromPoints-param-b"><span class="type-annotation"><a href="polymer_app_layout/Point-class.html">Point</a>&lt;T&gt;</span> <span class="parameter-name">b</span></span>
+        </div>
+        )
+    </section>
+
+    <section class="desc markdown">
+    
+          <p>Create a rectangle spanned by the points <code class="prettyprint lang-dart">a</code> and <code class="prettyprint lang-dart">b</code>;</p>
+<p>The rectangle contains the points
+with x-coordinate between <code class="prettyprint lang-dart">a.x</code> and <code class="prettyprint lang-dart">b.x</code>, and
+with y-coordinate between <code class="prettyprint lang-dart">a.y</code> and <code class="prettyprint lang-dart">b.y</code>, both inclusive.</p>
+<p>If the distance between <code class="prettyprint lang-dart">a.x</code> and <code class="prettyprint lang-dart">b.x</code> is not representable
+(which can happen if one or both is a double),
+the actual right edge might be slightly off from <code class="prettyprint lang-dart">max(a.x, b.x)</code>.
+Similar for the y-coordinates and the bottom edge.</p>
+    
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

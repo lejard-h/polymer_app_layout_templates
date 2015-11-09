@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>allowTagExtension method - NodeValidatorBuilder class - polymer_app_layout.behaviors library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the allowTagExtension method from the NodeValidatorBuilder class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+                <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder-class.html">NodeValidatorBuilder</a></li>
+                <li class="self-crumb">allowTagExtension</li>
+            </ol>
+            <div class="self-name">allowTagExtension</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+            <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder-class.html">NodeValidatorBuilder</a></li>
+            <li class="self-crumb">allowTagExtension</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> allowTagExtension
+            </h1>
+            <!-- p class="subtitle">
+                Allow custom tag extensions with the specified type name and specified
+attributes.
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowTagExtension.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/NodeValidatorBuilder-class.html">NodeValidatorBuilder</a></h5>
+
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/NodeValidatorBuilder-class.html#constructors">Constructors</a></li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/NodeValidatorBuilder.html">NodeValidatorBuilder</a></li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/NodeValidatorBuilder.common.html">common</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/NodeValidatorBuilder-class.html#methods">Methods</a></li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/add.html">add</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowCustomElement.html">allowCustomElement</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowElement.html">allowElement</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowHtml5.html">allowHtml5</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowImages.html">allowImages</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowInlineStyles.html">allowInlineStyles</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowNavigation.html">allowNavigation</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowsAttribute.html">allowsAttribute</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowsElement.html">allowsElement</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowSvg.html">allowSvg</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowTagExtension.html">allowTagExtension</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowTemplating.html">allowTemplating</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/NodeValidatorBuilder/allowTextElements.html">allowTextElements</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">void</span>
+            <span class="name ">allowTagExtension</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="allowTagExtension-param-tagName"><span class="type-annotation">String</span> <span class="parameter-name">tagName</span></span>,<br><span class="parameter" id="allowTagExtension-param-baseName"><span class="type-annotation">String</span> <span class="parameter-name">baseName</span></span>,<br>{<span class="parameter" id="allowTagExtension-param-uriPolicy"><span class="type-annotation"><a href="polymer_app_layout/UriPolicy-class.html">UriPolicy</a></span> <span class="parameter-name">uriPolicy</span></span>,<br><span class="parameter" id="allowTagExtension-param-attributes"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">attributes</span></span>,<br><span class="parameter" id="allowTagExtension-param-uriAttributes"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">uriAttributes</span></span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Allow custom tag extensions with the specified type name and specified
+attributes.</p>
+<p>This will allow tag extensions (such as &lt;div is="x-foo"&gt;&lt;/div&gt;),
+but will not allow custom tags. Use <a href="polymer_app_layout/NodeValidatorBuilder/allowCustomElement.html">allowCustomElement</a> to allow
+custom tags.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/**
+ * Allow custom tag extensions with the specified type name and specified
+ * attributes.
+ *
+ * This will allow tag extensions (such as &lt;div is=&quot;x-foo&quot;&gt;&lt;/div&gt;),
+ * but will not allow custom tags. Use [allowCustomElement] to allow
+ * custom tags.
+ */
+void allowTagExtension(String tagName, String baseName,
+    {UriPolicy uriPolicy,
+    Iterable&lt;String&gt; attributes,
+    Iterable&lt;String&gt; uriAttributes}) {
+
+  var baseNameUpper = baseName.toUpperCase();
+  var tagNameUpper = tagName.toUpperCase();
+  var attrs;
+  if (attributes != null) {
+    attrs =
+        attributes.map((name) =&gt; &apos;$baseNameUpper::${name.toLowerCase()}&apos;);
+  }
+  var uriAttrs;
+  if (uriAttributes != null) {
+    uriAttrs =
+        uriAttributes.map((name) =&gt; &apos;$baseNameUpper::${name.toLowerCase()}&apos;);
+  }
+  if (uriPolicy == null) {
+    uriPolicy = new UriPolicy();
+  }
+
+  add(new _CustomElementNodeValidator(
+      uriPolicy,
+      [tagNameUpper, baseNameUpper],
+      attrs,
+      uriAttrs,
+      true,
+      false));
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>elementFromPoint method - HtmlDocument class - polymer_app_layout.behaviors library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the elementFromPoint method from the HtmlDocument class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+                <li><a href="polymer_app_layout.behaviors/HtmlDocument-class.html">HtmlDocument</a></li>
+                <li class="self-crumb">elementFromPoint</li>
+            </ol>
+            <div class="self-name">elementFromPoint</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+            <li><a href="polymer_app_layout.behaviors/HtmlDocument-class.html">HtmlDocument</a></li>
+            <li class="self-crumb">elementFromPoint</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> elementFromPoint
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout.behaviors/HtmlDocument/elementFromPoint.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/HtmlDocument-class.html">HtmlDocument</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="polymer_app_layout.behaviors/HtmlDocument-class.html#constants">Constants</a></li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/visibilityChangeEvent.html">visibilityChangeEvent</a></li>
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/HtmlDocument-class.html#static-properties">Static properties</a></li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/supportsCssCanvasContext.html">supportsCssCanvasContext</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/HtmlDocument-class.html#instance-properties">Properties</a></li>
+      <li>activeElement
+</li>
+      <li>baseUri
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/body.html">body</a>
+</li>
+      <li>childNodes
+</li>
+      <li>contentType
+</li>
+      <li>cookie
+</li>
+      <li>currentScript
+</li>
+      <li>documentElement
+</li>
+      <li>domain
+</li>
+      <li>firstChild
+</li>
+      <li>fonts
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/fullscreenElement.html">fullscreenElement</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/fullscreenEnabled.html">fullscreenEnabled</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/head.html">head</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/hidden.html">hidden</a>
+</li>
+      <li>implementation
+</li>
+      <li>lastChild
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/lastModified.html">lastModified</a>
+</li>
+      <li>nextNode
+</li>
+      <li>nodeName
+</li>
+      <li>nodes
+</li>
+      <li>nodeType
+</li>
+      <li>nodeValue
+</li>
+      <li>on
+</li>
+      <li>onAbort
+</li>
+      <li>onBeforeCopy
+</li>
+      <li>onBeforeCut
+</li>
+      <li>onBeforePaste
+</li>
+      <li>onBlur
+</li>
+      <li>onCanPlay
+</li>
+      <li>onCanPlayThrough
+</li>
+      <li>onChange
+</li>
+      <li>onClick
+</li>
+      <li>onContextMenu
+</li>
+      <li>onCopy
+</li>
+      <li>onCut
+</li>
+      <li>onDoubleClick
+</li>
+      <li>onDrag
+</li>
+      <li>onDragEnd
+</li>
+      <li>onDragEnter
+</li>
+      <li>onDragLeave
+</li>
+      <li>onDragOver
+</li>
+      <li>onDragStart
+</li>
+      <li>onDrop
+</li>
+      <li>onDurationChange
+</li>
+      <li>onEmptied
+</li>
+      <li>onEnded
+</li>
+      <li>onError
+</li>
+      <li>onFocus
+</li>
+      <li>onFullscreenChange
+</li>
+      <li>onFullscreenError
+</li>
+      <li>onInput
+</li>
+      <li>onInvalid
+</li>
+      <li>onKeyDown
+</li>
+      <li>onKeyPress
+</li>
+      <li>onKeyUp
+</li>
+      <li>onLoad
+</li>
+      <li>onLoadedData
+</li>
+      <li>onLoadedMetadata
+</li>
+      <li>onMouseDown
+</li>
+      <li>onMouseEnter
+</li>
+      <li>onMouseLeave
+</li>
+      <li>onMouseMove
+</li>
+      <li>onMouseOut
+</li>
+      <li>onMouseOver
+</li>
+      <li>onMouseUp
+</li>
+      <li>onMouseWheel
+</li>
+      <li>onPaste
+</li>
+      <li>onPause
+</li>
+      <li>onPlay
+</li>
+      <li>onPlaying
+</li>
+      <li>onPointerLockChange
+</li>
+      <li>onPointerLockError
+</li>
+      <li>onRateChange
+</li>
+      <li>onReadyStateChange
+</li>
+      <li>onReset
+</li>
+      <li>onResize
+</li>
+      <li>onScroll
+</li>
+      <li>onSearch
+</li>
+      <li>onSecurityPolicyViolation
+</li>
+      <li>onSeeked
+</li>
+      <li>onSeeking
+</li>
+      <li>onSelect
+</li>
+      <li>onSelectionChange
+</li>
+      <li>onSelectStart
+</li>
+      <li>onStalled
+</li>
+      <li>onSubmit
+</li>
+      <li>onSuspend
+</li>
+      <li>onTimeUpdate
+</li>
+      <li>onTouchCancel
+</li>
+      <li>onTouchEnd
+</li>
+      <li>onTouchMove
+</li>
+      <li>onTouchStart
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/onVisibilityChange.html">onVisibilityChange</a>
+</li>
+      <li>onVolumeChange
+</li>
+      <li>onWaiting
+</li>
+      <li>ownerDocument
+</li>
+      <li>parent
+</li>
+      <li>parentNode
+</li>
+      <li>pointerLockElement
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/preferredStylesheetSet.html">preferredStylesheetSet</a>
+</li>
+      <li>previousNode
+</li>
+      <li>readyState
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/referrer.html">referrer</a>
+</li>
+      <li>rootElement
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/selectedStylesheetSet.html">selectedStylesheetSet</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/styleSheets.html">styleSheets</a>
+</li>
+      <li>supportsRegister
+</li>
+      <li>supportsRegisterElement
+</li>
+      <li>text
+</li>
+      <li>timeline
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/title.html">title</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/visibilityState.html">visibilityState</a>
+</li>
+      <li>window
+</li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/HtmlDocument-class.html#methods">Methods</a></li>
+      <li>addEventListener
+</li>
+      <li>adoptNode
+</li>
+      <li>append
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/caretRangeFromPoint.html">caretRangeFromPoint</a>
+</li>
+      <li>clone
+</li>
+      <li>contains
+</li>
+      <li>createDocumentFragment
+</li>
+      <li>createElement
+</li>
+      <li>createElementNS
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/createElementUpgrader.html">createElementUpgrader</a>
+</li>
+      <li>createRange
+</li>
+      <li>dispatchEvent
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/elementFromPoint.html">elementFromPoint</a>
+</li>
+      <li>execCommand
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/exitFullscreen.html">exitFullscreen</a>
+</li>
+      <li>exitPointerLock
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/getCssCanvasContext.html">getCssCanvasContext</a>
+</li>
+      <li>getElementById
+</li>
+      <li>getElementsByClassName
+</li>
+      <li>getElementsByName
+</li>
+      <li>getElementsByTagName
+</li>
+      <li>hasChildNodes
+</li>
+      <li>importNode
+</li>
+      <li>insertAllBefore
+</li>
+      <li>insertBefore
+</li>
+      <li>query
+</li>
+      <li>queryAll
+</li>
+      <li>queryCommandEnabled
+</li>
+      <li>queryCommandIndeterm
+</li>
+      <li>queryCommandState
+</li>
+      <li>queryCommandSupported
+</li>
+      <li>queryCommandValue
+</li>
+      <li>querySelector
+</li>
+      <li>querySelectorAll
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/register.html">register</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/HtmlDocument/registerElement.html">registerElement</a>
+</li>
+      <li>remove
+</li>
+      <li>removeEventListener
+</li>
+      <li>replaceWith
+</li>
+      <li>toString
+</li>
+      <li>transformDocumentToTreeView
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <div>
+                <ol class="comma-separated metadata-annotations">
+                    <li class="metadata-annotation">@DomName(&apos;Document.elementFromPoint&apos;)</li>
+                </ol>
+            </div>
+            <span class="returntype"><a href="polymer_app_layout.behaviors/Element-class.html">Element</a></span>
+            <span class="name ">elementFromPoint</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="elementFromPoint-param-x"><span class="type-annotation">int</span> <span class="parameter-name">x</span></span>,<br><span class="parameter" id="elementFromPoint-param-y"><span class="type-annotation">int</span> <span class="parameter-name">y</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@DomName(&apos;Document.elementFromPoint&apos;)
+Element elementFromPoint(int x, int y) {
+  return _elementFromPoint(x, y);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

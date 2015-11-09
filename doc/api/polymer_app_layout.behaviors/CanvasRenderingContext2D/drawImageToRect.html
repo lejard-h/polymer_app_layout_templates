@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>drawImageToRect method - CanvasRenderingContext2D class - polymer_app_layout.behaviors library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the drawImageToRect method from the CanvasRenderingContext2D class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+                <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D-class.html">CanvasRenderingContext2D</a></li>
+                <li class="self-crumb">drawImageToRect</li>
+            </ol>
+            <div class="self-name">drawImageToRect</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+            <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D-class.html">CanvasRenderingContext2D</a></li>
+            <li class="self-crumb">drawImageToRect</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> drawImageToRect
+            </h1>
+            <!-- p class="subtitle">
+                Draws an image from a CanvasImageSource to an area of this canvas.
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawImageToRect.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D-class.html">CanvasRenderingContext2D</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/backingStorePixelRatio.html">backingStorePixelRatio</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/canvas.html">canvas</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/currentTransform.html">currentTransform</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/direction.html">direction</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/fillStyle.html">fillStyle</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/font.html">font</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/globalAlpha.html">globalAlpha</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/globalCompositeOperation.html">globalCompositeOperation</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/imageSmoothingEnabled.html">imageSmoothingEnabled</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/lineCap.html">lineCap</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/lineDashOffset.html">lineDashOffset</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/lineJoin.html">lineJoin</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/lineWidth.html">lineWidth</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/miterLimit.html">miterLimit</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/shadowBlur.html">shadowBlur</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/shadowColor.html">shadowColor</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/shadowOffsetX.html">shadowOffsetX</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/shadowOffsetY.html">shadowOffsetY</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/strokeStyle.html">strokeStyle</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/textAlign.html">textAlign</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/textBaseline.html">textBaseline</a>
+</li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D-class.html#methods">Methods</a></li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/addHitRegion.html">addHitRegion</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/arc.html">arc</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/arcTo.html">arcTo</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/beginPath.html">beginPath</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/bezierCurveTo.html">bezierCurveTo</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/clearHitRegions.html">clearHitRegions</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/clearRect.html">clearRect</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/clip.html">clip</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/closePath.html">closePath</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createImageData.html">createImageData</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createImageDataFromImageData.html">createImageDataFromImageData</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createLinearGradient.html">createLinearGradient</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createPattern.html">createPattern</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createPatternFromImage.html">createPatternFromImage</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/createRadialGradient.html">createRadialGradient</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawFocusIfNeeded.html">drawFocusIfNeeded</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawImage.html">drawImage</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawImageScaled.html">drawImageScaled</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawImageScaledFromSource.html">drawImageScaledFromSource</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/drawImageToRect.html">drawImageToRect</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/ellipse.html">ellipse</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/fill.html">fill</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/fillRect.html">fillRect</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/fillText.html">fillText</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/getContextAttributes.html">getContextAttributes</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/getImageData.html">getImageData</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/getLineDash.html">getLineDash</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/isContextLost.html">isContextLost</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/isPointInPath.html">isPointInPath</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/isPointInStroke.html">isPointInStroke</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/lineTo.html">lineTo</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/measureText.html">measureText</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/moveTo.html">moveTo</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/putImageData.html">putImageData</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/quadraticCurveTo.html">quadraticCurveTo</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/rect.html">rect</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/removeHitRegion.html">removeHitRegion</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/resetTransform.html">resetTransform</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/restore.html">restore</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/rotate.html">rotate</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/save.html">save</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/scale.html">scale</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/scrollPathIntoView.html">scrollPathIntoView</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setFillColorHsl.html">setFillColorHsl</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setFillColorRgb.html">setFillColorRgb</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setLineDash.html">setLineDash</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setStrokeColorHsl.html">setStrokeColorHsl</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setStrokeColorRgb.html">setStrokeColorRgb</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/setTransform.html">setTransform</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/stroke.html">stroke</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/strokeRect.html">strokeRect</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/strokeText.html">strokeText</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/transform.html">transform</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/CanvasRenderingContext2D/translate.html">translate</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <div>
+                <ol class="comma-separated metadata-annotations">
+                    <li class="metadata-annotation">@DomName(&apos;CanvasRenderingContext2D.drawImage&apos;)</li>
+                </ol>
+            </div>
+            <span class="returntype">void</span>
+            <span class="name ">drawImageToRect</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="drawImageToRect-param-source"><span class="type-annotation"><a href="polymer_app_layout/CanvasImageSource-class.html">CanvasImageSource</a></span> <span class="parameter-name">source</span></span>,<br><span class="parameter" id="drawImageToRect-param-destRect"><span class="type-annotation"><a href="polymer_app_layout/Rectangle-class.html">Rectangle</a></span> <span class="parameter-name">destRect</span></span>,<br>{<span class="parameter" id="drawImageToRect-param-sourceRect"><span class="type-annotation"><a href="polymer_app_layout/Rectangle-class.html">Rectangle</a></span> <span class="parameter-name">sourceRect</span></span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Draws an image from a CanvasImageSource to an area of this canvas.</p>
+<p>The image will be drawn to an area of this canvas defined by
+<code class="prettyprint lang-dart">destRect</code>. <code class="prettyprint lang-dart">sourceRect</code> defines the region of the source image that is
+drawn.
+If <code class="prettyprint lang-dart">sourceRect</code> is not provided, then
+the entire rectangular image from <code class="prettyprint lang-dart">source</code> will be drawn to this context.</p>
+<p>If the image is larger than canvas
+will allow, the image will be clipped to fit the available space.</p>
+<pre><code class="prettyprint lang-dart">CanvasElement canvas = new CanvasElement(width: 600, height: 600);
+CanvasRenderingContext2D ctx = canvas.context2D;
+ImageElement img = document.query('img');
+img.width = 100;
+img.height = 100;
+
+// Scale the image to 20x20.
+ctx.drawImageToRect(img, new Rectangle(50, 50, 20, 20));
+
+VideoElement video = document.query('video');
+video.width = 100;
+video.height = 100;
+// Take the middle 20x20 pixels from the video and stretch them.
+ctx.drawImageToRect(video, new Rectangle(50, 50, 100, 100),
+    sourceRect: new Rectangle(40, 40, 20, 20));
+
+// Draw the top 100x20 pixels from the otherCanvas.
+CanvasElement otherCanvas = document.query('canvas');
+ctx.drawImageToRect(otherCanvas, new Rectangle(0, 0, 100, 20),
+    sourceRect: new Rectangle(0, 0, 100, 20));
+</code></pre>
+<p>See also:</p><ul><li>
+<p><a href="polymer_app_layout/CanvasImageSource-class.html">CanvasImageSource</a> for more information on what data is retrieved
+from <code class="prettyprint lang-dart">source</code>.</p></li><li>
+<p><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-drawimage">drawImage</a>
+from the WHATWG.</p></li></ul>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/**
+ * Draws an image from a CanvasImageSource to an area of this canvas.
+ *
+ * The image will be drawn to an area of this canvas defined by
+ * [destRect]. [sourceRect] defines the region of the source image that is
+ * drawn.
+ * If [sourceRect] is not provided, then
+ * the entire rectangular image from [source] will be drawn to this context.
+ *
+ * If the image is larger than canvas
+ * will allow, the image will be clipped to fit the available space.
+ *
+ *     CanvasElement canvas = new CanvasElement(width: 600, height: 600);
+ *     CanvasRenderingContext2D ctx = canvas.context2D;
+ *     ImageElement img = document.query(&apos;img&apos;);
+ *     img.width = 100;
+ *     img.height = 100;
+ *
+ *     // Scale the image to 20x20.
+ *     ctx.drawImageToRect(img, new Rectangle(50, 50, 20, 20));
+ *
+ *     VideoElement video = document.query(&apos;video&apos;);
+ *     video.width = 100;
+ *     video.height = 100;
+ *     // Take the middle 20x20 pixels from the video and stretch them.
+ *     ctx.drawImageToRect(video, new Rectangle(50, 50, 100, 100),
+ *         sourceRect: new Rectangle(40, 40, 20, 20));
+ *
+ *     // Draw the top 100x20 pixels from the otherCanvas.
+ *     CanvasElement otherCanvas = document.query(&apos;canvas&apos;);
+ *     ctx.drawImageToRect(otherCanvas, new Rectangle(0, 0, 100, 20),
+ *         sourceRect: new Rectangle(0, 0, 100, 20));
+ *
+ * See also:
+ *
+ *   * [CanvasImageSource] for more information on what data is retrieved
+ * from [source].
+ *   * [drawImage](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-drawimage)
+ * from the WHATWG.
+ */
+@DomName(&apos;CanvasRenderingContext2D.drawImage&apos;)
+void drawImageToRect(CanvasImageSource source, Rectangle destRect,
+    {Rectangle sourceRect}) {
+  if (sourceRect == null) {
+    _drawImage(source,
+        destRect.left,
+        destRect.top,
+        destRect.width,
+        destRect.height);
+  } else {
+    _drawImage(source,
+        sourceRect.left,
+        sourceRect.top,
+        sourceRect.width,
+        sourceRect.height,
+        destRect.left,
+        destRect.top,
+        destRect.width,
+        destRect.height);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

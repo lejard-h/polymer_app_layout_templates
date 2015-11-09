@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>getSources method - MediaStreamTrack class - polymer_app_layout library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the getSources method from the MediaStreamTrack class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+                <li><a href="polymer_app_layout/MediaStreamTrack-class.html">MediaStreamTrack</a></li>
+                <li class="self-crumb">getSources</li>
+            </ol>
+            <div class="self-name">getSources</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+            <li><a href="polymer_app_layout/MediaStreamTrack-class.html">MediaStreamTrack</a></li>
+            <li class="self-crumb">getSources</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> getSources
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout/MediaStreamTrack/getSources.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></h5>
+    <h5><a href="polymer_app_layout/MediaStreamTrack-class.html">MediaStreamTrack</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="polymer_app_layout/MediaStreamTrack-class.html#constants">Constants</a></li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/endedEvent.html">endedEvent</a></li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/muteEvent.html">muteEvent</a></li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/unmuteEvent.html">unmuteEvent</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/MediaStreamTrack-class.html#static-methods">Static methods</a></li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/getSources.html">getSources</a></li>
+    
+      <li class="section-title"><a href="polymer_app_layout/MediaStreamTrack-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/enabled.html">enabled</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/id.html">id</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/kind.html">kind</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/label.html">label</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/muted.html">muted</a>
+</li>
+      <li>on
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/onEnded.html">onEnded</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/onMute.html">onMute</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/onUnmute.html">onUnmute</a>
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/readyState.html">readyState</a>
+</li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/MediaStreamTrack-class.html#methods">Methods</a></li>
+      <li>addEventListener
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/clone.html">clone</a>
+</li>
+      <li>dispatchEvent
+</li>
+      <li>removeEventListener
+</li>
+      <li><a href="polymer_app_layout/MediaStreamTrack/stop.html">stop</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Future&lt;List&lt;<a href="dart-html/SourceInfo-class.html">SourceInfo</a>&gt;&gt;</span>
+            <span class="name ">getSources</span>(
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">static Future&lt;List&lt;SourceInfo&gt;&gt; getSources() {
+  var completer = new Completer&lt;List&lt;SourceInfo&gt;&gt;();
+  _getSources(
+      (value) { completer.complete(value); });
+  return completer.future;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

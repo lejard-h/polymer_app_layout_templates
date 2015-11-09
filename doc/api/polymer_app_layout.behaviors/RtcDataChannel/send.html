@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>send method - RtcDataChannel class - polymer_app_layout.behaviors library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the send method from the RtcDataChannel class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+                <li><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html">RtcDataChannel</a></li>
+                <li class="self-crumb">send</li>
+            </ol>
+            <div class="self-name">send</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></li>
+            <li><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html">RtcDataChannel</a></li>
+            <li class="self-crumb">send</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> send
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout.behaviors/RtcDataChannel/send.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/polymer_app_layout.behaviors-library.html">polymer_app_layout.behaviors</a></h5>
+    <h5><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html">RtcDataChannel</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html#constants">Constants</a></li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/closeEvent.html">closeEvent</a></li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/errorEvent.html">errorEvent</a></li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/messageEvent.html">messageEvent</a></li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/openEvent.html">openEvent</a></li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html#instance-properties">Properties</a></li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/binaryType.html">binaryType</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/bufferedAmount.html">bufferedAmount</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/id.html">id</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/label.html">label</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/maxRetransmits.html">maxRetransmits</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/maxRetransmitTime.html">maxRetransmitTime</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/negotiated.html">negotiated</a>
+</li>
+      <li>on
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/onClose.html">onClose</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/onError.html">onError</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/onMessage.html">onMessage</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/onOpen.html">onOpen</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/ordered.html">ordered</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/protocol.html">protocol</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/readyState.html">readyState</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/reliable.html">reliable</a>
+</li>
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout.behaviors/RtcDataChannel-class.html#methods">Methods</a></li>
+      <li>addEventListener
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/close.html">close</a>
+</li>
+      <li>dispatchEvent
+</li>
+      <li>removeEventListener
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/send.html">send</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/sendBlob.html">sendBlob</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/sendByteBuffer.html">sendByteBuffer</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/sendString.html">sendString</a>
+</li>
+      <li><a href="polymer_app_layout.behaviors/RtcDataChannel/sendTypedData.html">sendTypedData</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">void</span>
+            <span class="name ">send</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="send-param-data"><span class="parameter-name">data</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void send(data) {
+  if ((data is String || data == null)) {
+    _blink.BlinkRTCDataChannel.instance.send_Callback_1_(unwrap_jso(this), unwrap_jso(data));
+    return;
+  }
+  if ((data is Blob || data == null)) {
+    _blink.BlinkRTCDataChannel.instance.send_Callback_1_(unwrap_jso(this), unwrap_jso(data));
+    return;
+  }
+  if ((data is TypedData || data == null)) {
+    _blink.BlinkRTCDataChannel.instance.send_Callback_1_(unwrap_jso(this), unwrap_jso(data));
+    return;
+  }
+  if ((data is ByteBuffer || data == null)) {
+    _blink.BlinkRTCDataChannel.instance.send_Callback_1_(unwrap_jso(this), unwrap_jso(data));
+    return;
+  }
+  throw new ArgumentError(&quot;Incorrect number or type of arguments&quot;);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>
