@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>forTarget method - EventStreamProvider class - polymer_app_layout library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the forTarget method from the EventStreamProvider class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">polymer_app_layout_template</a></li>
+                <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+                <li><a href="polymer_app_layout/EventStreamProvider-class.html">EventStreamProvider</a></li>
+                <li class="self-crumb">forTarget</li>
+            </ol>
+            <div class="self-name">forTarget</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">polymer_app_layout_template</a></li>
+            <li><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></li>
+            <li><a href="polymer_app_layout/EventStreamProvider-class.html">EventStreamProvider</a></li>
+            <li class="self-crumb">forTarget</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> forTarget
+            </h1>
+            <!-- p class="subtitle">
+                Gets a <code class="prettyprint lang-dart">Stream</code> for this event type, on the specified target.
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="polymer_app_layout/EventStreamProvider/forTarget.html#source">Source</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">polymer_app_layout_template</a></h5>
+    <h5><a href="polymer_app_layout/polymer_app_layout-library.html">polymer_app_layout</a></h5>
+    <h5><a href="polymer_app_layout/EventStreamProvider-class.html">EventStreamProvider</a></h5>
+
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/EventStreamProvider-class.html#constructors">Constructors</a></li>
+      <li><a href="polymer_app_layout/EventStreamProvider/EventStreamProvider.html">EventStreamProvider</a></li>
+    
+    
+      <li class="section-title"><a href="polymer_app_layout/EventStreamProvider-class.html#methods">Methods</a></li>
+      <li><a href="polymer_app_layout/EventStreamProvider/forElement.html">forElement</a>
+</li>
+      <li><a href="polymer_app_layout/EventStreamProvider/forTarget.html">forTarget</a>
+</li>
+      <li><a href="polymer_app_layout/EventStreamProvider/getEventType.html">getEventType</a>
+</li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Stream&lt;T&gt;</span>
+            <span class="name ">forTarget</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="forTarget-param-e"><span class="type-annotation"><a href="polymer_app_layout/EventTarget-class.html">EventTarget</a></span> <span class="parameter-name">e</span></span>,<br>{<span class="parameter" id="forTarget-param-useCapture"><span class="type-annotation">bool</span> <span class="parameter-name">useCapture</span>: <span class="default-value">false</span></span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Gets a <code class="prettyprint lang-dart">Stream</code> for this event type, on the specified target.</p>
+<p>This will always return a broadcast stream so multiple listeners can be
+used simultaneously.</p>
+<p>This may be used to capture DOM events:</p>
+<pre><code class="prettyprint lang-dart">Element.keyDownEvent.forTarget(element, useCapture: true).listen(...);
+
+// Alternate method:
+Element.keyDownEvent.forTarget(element).capture(...);
+</code></pre>
+<p>Or for listening to an event which will bubble through the DOM tree:</p>
+<pre><code class="prettyprint lang-dart">MediaElement.pauseEvent.forTarget(document.body).listen(...);
+</code></pre>
+<p>See also:</p>
+<p><a href="http://docs.webplatform.org/wiki/dom/methods/addEventListener">addEventListener</a></p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/**
+ * Gets a [Stream] for this event type, on the specified target.
+ *
+ * This will always return a broadcast stream so multiple listeners can be
+ * used simultaneously.
+ *
+ * This may be used to capture DOM events:
+ *
+ *     Element.keyDownEvent.forTarget(element, useCapture: true).listen(...);
+ *
+ *     // Alternate method:
+ *     Element.keyDownEvent.forTarget(element).capture(...);
+ *
+ * Or for listening to an event which will bubble through the DOM tree:
+ *
+ *     MediaElement.pauseEvent.forTarget(document.body).listen(...);
+ *
+ * See also:
+ *
+ * [addEventListener](http://docs.webplatform.org/wiki/dom/methods/addEventListener)
+ */
+Stream&lt;T&gt; forTarget(EventTarget e, {bool useCapture: false}) =&gt;
+  new _EventStream(e, _eventType, useCapture);</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  polymer_app_layout_template 0.1.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

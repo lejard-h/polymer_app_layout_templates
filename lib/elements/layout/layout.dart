@@ -17,19 +17,64 @@ import "package:polymer_app_layout_template/elements/nav_view/nav_view.dart";
 
 import 'package:web_components/web_components.dart' show HtmlImport;
 
+/**
+ * Usage
+ *
+ * Html
+ *      <layout-app pages="{{pages}}" toolbar-items="{{toolbarItems}}" layout-type="layout-nav-header"></layout-app>
+ *
+ *
+ * Dart Polymer Element
+ *
+ *      @property
+ *      List<Page> get pages => [
+ *        new Page("Home", "home", "home-page", isDefault: true),
+ *        new Page("One", "one", "page-one"),
+ *        new Page("Two", "two", "page-two", menu: false)
+ *      ];
+ *
+ *      @property
+ *      List get toolbarItems => [
+ *        'toolbar-more-button' // or document.createElement('toolbar-more-button');
+ *      ];
+ *
+ *      @Listen(PolymerRouteBehavior.page_changed_event)
+ *      pageChanged(CustomEventWrapper e, [_]) {
+ *        print("page changed => ${(e.detail as Page)}");
+ *      }
+ *
+ *      @Listen(PolymerRouteBehavior.path_changed_event)
+ *      pathChanged(CustomEventWrapper e, [_]) {
+ *        print("path changed => ${e.detail}");
+ *      }
+ *
+ *      gotToHome() {
+ *        PolymerRouteBehavior.goToDefault();
+ *      }
+ *
+ *      gotToPage(String pageName) {
+ *        PolymerRouteBehavior.goToName(pageName);
+ *      }
+ */
 @PolymerRegister('layout-app')
 class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   LayoutApp.created() : super.created();
 
-  static String get LAYOUT_NAV_VIEW => "layout-nav-view";
+  static String get layout_nav_view => "layout-nav-view";
 
-  static String get LAYOUT_NAV_HEADER => "layout-nav-header";
+  static String get layout_nav_header => "layout-nav-header";
 
-  static String get LAYOUT_LIST_CARD_OVER => "layout-list-card-over";
+  static String get layout_list_card_over => "layout-list-card-over";
 
   var _navHeader;
   var _navFooter;
+  String _layoutType;
+  HtmlElement _layout;
+  List<AppPage> _pages;
+  List _toolbarItems;
 
+  /// Define the element to show in the nav Header.
+  /// Can be an [HtmlElement] or the element name as a [String].
   @property
   get navHeader => _navHeader;
 
@@ -40,6 +85,8 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     }
   }
 
+  /// Define the element to show in the nav Footer.
+  /// Can be an [HtmlElement] or the element name as a [String].
   @property
   get navFooter => _navFooter;
 
@@ -50,8 +97,10 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     }
   }
 
-  String _layoutType;
-
+  /// Define the type of layout
+  /// * layout-nav-view
+  /// * layout-nav-header
+  /// * layout-list-card-over
   @property
   String get layoutType => _layoutType;
 
@@ -63,14 +112,10 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     } else {}
   }
 
-  HtmlElement _layout = null;
-
   @property
   HtmlElement get layout => _layout;
 
-  List<AppPage> _pages;
-  List _toolbarItems;
-
+  /// Pages config
   @property
   List<AppPage> get pages => _pages;
 
@@ -117,7 +162,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
     return _layout;
   }
 
-  _layoutIsValid(value) => (value == LAYOUT_NAV_VIEW || value == LAYOUT_LIST_CARD_OVER || value == LAYOUT_NAV_HEADER);
+  _layoutIsValid(value) => (value == layout_nav_view || value == layout_list_card_over || value == layout_nav_header);
 
   _setLayout() {
     if (_layoutIsValid(layoutType)) {
@@ -133,7 +178,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   ready() {
     if (layoutType == null) {
-      layoutType = LAYOUT_NAV_VIEW;
+      layoutType = layout_nav_view;
     }
   }
 }

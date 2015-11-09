@@ -17,6 +17,9 @@ abstract class LeftNavBehavior {
   HtmlElement get nav => $['nav'];
   PaperDrawerPanel get drawer => $['drawerPanel'];
 
+
+  /// Define the element to show in the nav Header.
+  /// Can be an [HtmlElement] or the element name as a [String].
   @property
   get navHeader => _navHeader;
 
@@ -27,6 +30,8 @@ abstract class LeftNavBehavior {
     }
   }
 
+  /// Define the element to show in the nav Footer.
+  /// Can be an [HtmlElement] or the element name as a [String].
   @property
   get navFooter => _navFooter;
 

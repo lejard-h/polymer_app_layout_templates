@@ -10,6 +10,9 @@ import 'package:polymer/polymer.dart';
 abstract class ToolbarBehavior {
   List _toolbarItems;
 
+  /// List of element to put in the toolbar
+  ///
+  /// List of [HtmlElement], [String] or both
   @property
   List get toolbarItems => _toolbarItems;
 

@@ -12,10 +12,19 @@ import "package:polymer_app_layout_template/models/models.dart";
 
 @behavior
 abstract class PolymerRouteBehavior {
+
+  /// [Router] Instance.
   static Router router;
+
   static String defaultPathName;
 
+  /// Event send when the current path change
+  /// Event detail is a [String]
   static const String path_changed_event = "current-path-changed";
+
+
+  /// Event send when the current page change.
+  /// The page is send in event detail.
   static const String page_changed_event = "current-page-changed";
 
   List<Page> _visiblePagesMenu;
@@ -28,6 +37,7 @@ abstract class PolymerRouteBehavior {
   int _routeIdx;
   bool _useFragment = true;
 
+  /// Go to the default Page
   @reflectable
   static goToDefault([Map params]) {
     if (params == null) {
@@ -38,6 +48,7 @@ abstract class PolymerRouteBehavior {
     }
   }
 
+  /// Go to the page corresponding to the name
   @reflectable
   static goToName(String name, [Map params]) {
     if (params == null) {
@@ -96,14 +107,18 @@ abstract class PolymerRouteBehavior {
   @property
   bool get useFragment => _useFragment;
 
+
+  /// Current Path
   String get currentPath => _currentPath;
 
   @property
   List<Page> get visiblePagesMenu => _visiblePagesMenu;
 
+  /// Current Page
   @property
   Page get selectedPage => _selectedPage;
 
+  /// Pages config
   @property
   List<Page> get pages => _pages;
 
@@ -161,9 +176,7 @@ abstract class PolymerRouteBehavior {
   }
 
   void set selectedPage(Page value) {
-    print(value);
     if (value != null && _selectedPage != value) {
-      print(value);
       routeIdx = pages.indexOf(pages.firstWhere((item) => isSamePath(item.path, value.path) && item.element != null));
     }
     _selectedPage = value;
