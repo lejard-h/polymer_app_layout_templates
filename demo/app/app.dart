@@ -11,20 +11,35 @@ import 'package:polymer_app_layout_template/app_layout.dart';
 
 @PolymerRegister('app-demo')
 class AppDemo extends PolymerElement {
+  AppDemo.created() : super.created();
 
-    AppDemo.created() : super.created();
-
-    @property
-    List<Page> get pages => [
+  @property
+  List<Page> get pages => [
         new Page("Home", "home", "home-page", isDefault: true),
         new Page("One", "one", "page-one"),
         new Page("Two", "two", "page-two", menu: false)
-    ];
+      ];
 
-
-    @property
-    List get toolbarItems => [
+  @property
+  List get toolbarItems => [
         'toolbar-more-button' // or document.createElement('toolbar-more-button');
-    ];
+      ];
 
+  @Listen(PolymerRouteBehavior.page_changed_event)
+  pageChanged(CustomEventWrapper e, [_]) {
+    print("page changed => ${(e.detail as Page)}");
+  }
+
+  @Listen(PolymerRouteBehavior.path_changed_event)
+  pathChanged(CustomEventWrapper e, [_]) {
+    print("path changed => ${e.detail}");
+  }
+
+  gotToHome() {
+    PolymerRouteBehavior.goToDefault();
+  }
+
+  gotToPage(String pageName) {
+    PolymerRouteBehavior.goToName(pageName);
+  }
 }

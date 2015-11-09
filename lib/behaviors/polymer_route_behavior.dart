@@ -10,14 +10,13 @@ import "package:polymer/polymer.dart";
 import 'package:route_hierarchical/client.dart';
 import "package:polymer_app_layout_template/models/models.dart";
 
-
 @behavior
 abstract class PolymerRouteBehavior {
   static Router router;
   static String defaultPathName;
 
-  static String get  path_changed_event => "current-path-changed";
-  static String get  page_changed_event => "current-page-changed";
+  static const String path_changed_event = "current-path-changed";
+  static const String page_changed_event = "current-page-changed";
 
   List<Page> _visiblePagesMenu;
   List<Page> _childPages;
