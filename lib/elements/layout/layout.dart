@@ -33,7 +33,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   @property
   get navHeader => _navHeader;
 
-  @reflectable
   set navHeader(value) {
     if (value is String || value is HtmlElement) {
       _navHeader = value;
@@ -56,7 +55,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   @property
   String get layoutType => _layoutType;
 
-  @reflectable
   void set layoutType(String value) {
     if (_layoutIsValid(value) && value != _layoutType) {
       _layoutType = value;
@@ -76,7 +74,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   @property
   List<AppPage> get pages => _pages;
 
-  @reflectable
   set pages(List<AppPage> value) {
     _pages = value;
     notifyPath("pages", value);
@@ -86,7 +83,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   @property
   List get toolbarItems => _toolbarItems;
 
-  @reflectable
   set toolbarItems(List value) {
     _toolbarItems = value;
     notifyPath("toolbar-items", value);

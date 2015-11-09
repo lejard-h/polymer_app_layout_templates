@@ -13,7 +13,6 @@ abstract class ToolbarBehavior {
   @property
   List get toolbarItems => _toolbarItems;
 
-  @reflectable
   set toolbarItems(List value) {
     _toolbarItems = value;
     notifyPath("toolbarItems", _toolbarItems);
