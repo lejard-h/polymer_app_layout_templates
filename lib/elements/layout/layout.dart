@@ -203,7 +203,7 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
       _setToolbarItems(toolbarItems);
       _setNavHeader(navHeader);
       _setNavFooter(navFooter);
-      include(_layout, $['container']);
+      include(_layout, Polymer.dom($['container']));
       notifyPath("layout", _layout);
     }
   }
