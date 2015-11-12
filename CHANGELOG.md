@@ -1,3 +1,9 @@
+## 0.1.1
+
+### Usable Toast Element
+### Loading Element
+
+
 ## 0.1.0
 
 ### Stable
