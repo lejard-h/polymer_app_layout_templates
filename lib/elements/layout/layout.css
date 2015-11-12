@@ -1,4 +1,15 @@
-
 :host {
     display: block;
+    --toast-error-color: #D32F2F;
+    --toast-success-color: #4CAF50;
+}
+
+paper-toast.toast-error {
+    background: var(--toast-error-color);
+    color: white;
+}
+
+paper-toast.toast-success {
+    background: var(--toast-sucess-color);
+    color: white;
 }

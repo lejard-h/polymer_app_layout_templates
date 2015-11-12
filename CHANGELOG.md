@@ -1,3 +1,16 @@
+## 0.1.1
+
+### Usable Toast Element
+* LayoutApp.showError([message, duration])
+* LayoutApp.showSuccess([message, duration])
+* --toast-error-color
+* --toast-success-color
+
+### Loading Element
+* LayoutApp.loading(state, [message])
+* --default-primary-color for color settings
+
+
 ## 0.1.0
 
 ### Stable

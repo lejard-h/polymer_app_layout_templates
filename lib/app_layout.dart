@@ -12,3 +12,4 @@ export "elements/layout/layout.dart";
 export "elements/list_card_over/list_card_over.dart";
 export "elements/nav_header/nav_header.dart";
 export "elements/nav_view/nav_view.dart";
+export 'elements/loading_element/loading_element.dart';

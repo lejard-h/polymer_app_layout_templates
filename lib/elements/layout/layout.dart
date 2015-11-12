@@ -14,6 +14,7 @@ import "package:polymer_app_layout_template/elements/layout/layout.dart";
 import "package:polymer_app_layout_template/elements/list_card_over/list_card_over.dart";
 import "package:polymer_app_layout_template/elements/nav_header/nav_header.dart";
 import "package:polymer_app_layout_template/elements/nav_view/nav_view.dart";
+import "package:polymer_app_layout_template/elements/loading_element/loading_element.dart";
 
 import 'package:web_components/web_components.dart' show HtmlImport;
 
@@ -65,6 +66,37 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   static String get layout_nav_header => "layout-nav-header";
 
   static String get layout_list_card_over => "layout-list-card-over";
+
+  static PaperToast _toast;
+
+  static showError([String msg, num duration = 3000]) {
+    if (_toast != null) {
+      _toast.text = msg;
+      _toast.duration = duration;
+      _toast.toggleClass("toast-success", false);
+      _toast.toggleClass("toast-error", true);
+      _toast.toggle();
+    }
+  }
+
+  static showSuccess([String msg, num duration = 3000]) {
+    if (_toast != null) {
+      _toast.text = msg;
+      _toast.duration = duration;
+      _toast.toggleClass("toast-success", true);
+      _toast.toggleClass("toast-error", false);
+      _toast.toggle();
+    }
+  }
+
+  static LoadingElement _loading;
+
+  static loading(bool state, [String message = null]) {
+   if (_loading != null) {
+      _loading.message = message;
+     _loading.loading(state);
+   }
+  }
 
   var _navHeader;
   var _navFooter;
@@ -171,12 +203,14 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
       _setToolbarItems(toolbarItems);
       _setNavHeader(navHeader);
       _setNavFooter(navFooter);
-      include(_layout, Polymer.dom(this.root));
+      include(_layout, $['container']);
       notifyPath("layout", _layout);
     }
   }
 
   ready() {
+    _toast = $['toast'] as PaperToast;
+    _loading = $['loading'] as LoadingElement;
     if (layoutType == null) {
       layoutType = layout_nav_view;
     }

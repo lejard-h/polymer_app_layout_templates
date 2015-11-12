@@ -17,7 +17,7 @@ Left Nav + View
                         <paper-item class="menu-item" hash="{{item.path}}" on-click="menuItemClicked">
                             <span class="layout horizontal">
                                 <template if="{{ isIconString(item)}}" is="dom-if">
-                                    <iron-icon icon="{{item.icon}}"></paper-icon-button>
+                                    <iron-icon icon="{{item.icon}}"></iron-icon>
                                 </template>
                                 <template if="{{ isIconHtmlElement(item)}}" is="dom-if">
                                     <polymer-include-element element="[[item.icon]]"></polymer-include-element>
@@ -38,7 +38,7 @@ Left Nav + View
                         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                     </template>
                     <template if="{{ isIconString(selectedPage)}}" is="dom-if">
-                        <iron-icon icon="{{selectedPage.icon}}"></paper-icon-button>
+                        <iron-icon icon="{{selectedPage.icon}}"></iron-icon>
                     </template>
                     <template if="{{ isIconHtmlElement(selectedPage)}}" is="dom-if">
                         <polymer-include-element element="[[selectedPage.icon]]"></polymer-include-element>
@@ -58,7 +58,7 @@ Left Nav + View
                                     <paper-tab hash="{{item.path}}">
                                         <paper-item hash="{{item.path}}">
                                             <template if="{{ isIconString(item)}}" is="dom-if">
-                                                <iron-icon icon="{{item.icon}}"></paper-icon-button>
+                                                <iron-icon icon="{{item.icon}}"></iron-icon>
                                             </template>
                                             <template if="{{ isIconHtmlElement(item)}}" is="dom-if">
                                                 <polymer-include-element element="[[item.icon]]"></polymer-include-element>

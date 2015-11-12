@@ -17,4 +17,5 @@ export 'package:polymer_elements/paper_menu.dart';
 export 'package:polymer_elements/paper_tab.dart';
 export 'package:polymer_elements/paper_tabs.dart';
 export 'package:polymer_elements/paper_toolbar.dart';
+export 'package:polymer_elements/paper_toast.dart';
 export 'package:polymer_include_element/polymer_include_element.dart';
