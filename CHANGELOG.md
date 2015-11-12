@@ -5,6 +5,7 @@
 * LayoutApp.showSuccess([message, duration])
 * --toast-error-color
 * --toast-success-color
+
 ### Loading Element
 * LayoutApp.loading(state, [message])
 * --default-primary-color for color settings
