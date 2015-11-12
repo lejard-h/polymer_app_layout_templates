@@ -1,4 +1,6 @@
-## 0.1.1
+## 0.1.2
+
+### Fix page in chrome
 
 ### Usable Toast Element
 * LayoutApp.showError([message, duration])
