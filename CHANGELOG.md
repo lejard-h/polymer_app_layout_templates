@@ -1,3 +1,11 @@
+## 0.1.3
+
+### Fix Demo
+
+### Usage of routing
+* LayoutApp.goToDefault([params])
+* LayoutApp.goToRouteName(name, [params])
+
 ## 0.1.2
 
 ### Fix page in chrome

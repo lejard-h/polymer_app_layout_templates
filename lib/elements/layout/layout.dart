@@ -10,7 +10,6 @@ import 'package:polymer_app_layout_template/models/models.dart';
 import 'package:polymer_app_layout_template/behaviors/behaviors.dart';
 import 'package:polymer_app_layout_template/elements/elements.dart';
 
-import "package:polymer_app_layout_template/elements/layout/layout.dart";
 import "package:polymer_app_layout_template/elements/list_card_over/list_card_over.dart";
 import "package:polymer_app_layout_template/elements/nav_header/nav_header.dart";
 import "package:polymer_app_layout_template/elements/nav_view/nav_view.dart";
@@ -66,37 +65,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   static String get layout_nav_header => "layout-nav-header";
 
   static String get layout_list_card_over => "layout-list-card-over";
-
-  static PaperToast _toast;
-
-  static showError([String msg, num duration = 3000]) {
-    if (_toast != null) {
-      _toast.text = msg;
-      _toast.duration = duration;
-      _toast.toggleClass("toast-success", false);
-      _toast.toggleClass("toast-error", true);
-      _toast.toggle();
-    }
-  }
-
-  static showSuccess([String msg, num duration = 3000]) {
-    if (_toast != null) {
-      _toast.text = msg;
-      _toast.duration = duration;
-      _toast.toggleClass("toast-success", true);
-      _toast.toggleClass("toast-error", false);
-      _toast.toggle();
-    }
-  }
-
-  static LoadingElement _loading;
-
-  static loading(bool state, [String message = null]) {
-   if (_loading != null) {
-      _loading.message = message;
-     _loading.loading(state);
-   }
-  }
 
   var _navHeader;
   var _navFooter;
@@ -209,10 +177,60 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   }
 
   ready() {
-    _toast = $['toast'] as PaperToast;
+    _toastElement = $['toast'] as PaperToast;
     _loading = $['loading'] as LoadingElement;
     if (layoutType == null) {
       layoutType = layout_nav_view;
     }
+  }
+
+  static PaperToast _toastElement;
+
+  static showError([String msg, num duration = 3000]) {
+    if (_toastElement != null) {
+      _toastElement.text = msg;
+      _toastElement.duration = duration;
+      _toastElement.toggleClass("toast-success", false);
+      _toastElement.toggleClass("toast-error", true);
+      _toastElement.toggle();
+    }
+  }
+
+  static showSuccess([String msg, num duration = 3000]) {
+    if (_toastElement != null) {
+      _toastElement.text = msg;
+      _toastElement.duration = duration;
+      _toastElement.toggleClass("toast-success", true);
+      _toastElement.toggleClass("toast-error", false);
+      _toastElement.toggle();
+    }
+  }
+
+  bool _isLoading;
+
+  @property
+  bool get isLoading => _isLoading;
+
+  set isLoading(bool value) {
+    loading(value);
+    _isLoading = value;
+    notifyPath("isLoading", value);
+  }
+
+  static LoadingElement _loading;
+
+  static loading(bool state, [String message = null]) {
+    if (_loading != null) {
+      _loading.message = message;
+      _loading.loading(state);
+    }
+  }
+
+  static goToDefaultRoute([Map params]) {
+    PolymerRouteBehavior.goToDefault(params);
+  }
+
+  static goToRouteName(String name, [Map params]) {
+    PolymerRouteBehavior.goToName(name, params);
   }
 }

@@ -7,11 +7,18 @@ Left Nav + View
     <template>
         <iron-media-query query-matches="{{_isMobile}}" query="(max-width: 780px)"></iron-media-query>
 
-        <paper-drawer-panel force-narrow="true" id="drawerPanel">
+        <paper-drawer-panel force-narrow="true" id="drawerPanel" transition>
 
             <div class="nav layout vertical" drawer id="nav">
                 <!-- Nav Content -->
-                <polymer-include-element element="[[navHeader]]"></polymer-include-element>
+                <template is="dom-if" if="{{navHeaderIsValid}}">
+                    <polymer-include-element element="[[navHeader]]"></polymer-include-element>
+                </template>
+                <template is="dom-if" if="{{!navHeaderIsValid}}">
+                    <paper-toolbar>
+                        <span class="title">{{appName}}</span>
+                    </paper-toolbar>
+                </template>
                 <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash" class="flex">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
                         <paper-item class="menu-item" hash="{{item.path}}" on-click="menuItemClicked">

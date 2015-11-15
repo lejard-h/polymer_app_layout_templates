@@ -16,10 +16,23 @@ abstract class LeftNavBehavior {
   var _navFooter;
   HtmlElement get nav => $['nav'];
   PaperDrawerPanel get drawer => $['drawerPanel'];
+  String _appName;
+
+  @property
+  String get appName => _appName;
+
+  set appName(String value) {
+    _appName = value;
+    notifyPath('appName', value);
+  }
+
+  @property
+  bool get navHeaderIsValid => navHeader != null && (navHeader is String || navHeader is HtmlElement);
 
 
   /// Define the element to show in the nav Header.
   /// Can be an [HtmlElement] or the element name as a [String].
+
   @property
   get navHeader => _navHeader;
 
