@@ -8,6 +8,12 @@ library polymer_app_layout.example.app_demo;
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart' show HtmlImport;
 import 'package:polymer_app_layout_template/app_layout.dart';
+import 'package:polymer_elements/paper_material.dart';
+import 'package:polymer_elements/paper_menu_button.dart';
+import 'package:polymer_elements/paper_icon_button.dart';
+import 'package:polymer_elements/paper_menu.dart';
+import 'package:polymer_elements/paper_item.dart';
+
 
 @PolymerRegister('app-demo')
 class AppDemo extends PolymerElement {

@@ -1,15 +1,15 @@
 :host {
     display: block;
-    --toast-error-color: #D32F2F;
-    --toast-success-color: #4CAF50;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 paper-toast.toast-error {
-    background: var(--toast-error-color);
+    background: var(--toast-error-color, #D32F2F);
     color: white;
 }
 
 paper-toast.toast-success {
-    background: var(--toast-sucess-color);
+    background: var(--toast-success-color, #D32F2F);
     color: white;
 }

@@ -18,3 +18,7 @@ iron-icon {
 #drawer {
     z-index: 2 !important;
 }
+
+paper-menu {
+    background-color: transparent;
+}

@@ -1,18 +1,27 @@
 :host {
     display: block;
 }
+
 paper-tab {
     text-decoration: none;
 }
+
 section {
     height: 100%;
 }
+
 .menu-item {
     cursor: pointer;
 }
+
 iron-icon {
     margin-right: 16px;
 }
+
 #drawer {
     z-index: 2 !important;
+}
+
+paper-menu {
+    background-color: transparent;
 }
