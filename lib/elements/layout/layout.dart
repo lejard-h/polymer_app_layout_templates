@@ -75,25 +75,27 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   /// Define the element to show in the nav Header.
   /// Can be an [HtmlElement] or the element name as a [String].
-  @property
+  @Property(notify: true)
   get navHeader => _navHeader;
 
   set navHeader(value) {
     if (value is String || value is HtmlElement) {
       _navHeader = value;
       notifyPath("navHeader", value);
+      _setNavHeader(navHeader);
     }
   }
 
   /// Define the element to show in the nav Footer.
   /// Can be an [HtmlElement] or the element name as a [String].
-  @property
+  @Property(notify: true)
   get navFooter => _navFooter;
 
   set navFooter(value) {
     if (value is String || value is HtmlElement) {
       _navFooter = value;
       notifyPath("navFooter", value);
+      _setNavFooter(navFooter);
     }
   }
 
@@ -135,29 +137,29 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   }
 
   _setToolbarItems(value) {
-    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
-      _layout.toolbarItems = value;
+    if (_layout != null && _layout is ToolbarBehavior) {
+      (_layout as ToolbarBehavior).toolbarItems = value;
     }
     return _layout;
   }
 
   _setPages(value) {
-    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
-      _layout.pages = value;
+    if (_layout != null && _layout is PolymerRouteBehavior) {
+      (_layout as PolymerRouteBehavior).pages = value;
     }
     return _layout;
   }
 
   _setNavHeader(value) {
-    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
-      _layout.navHeader = value;
+    if (_layout != null && _layout is LeftNavBehavior) {
+      (_layout as LeftNavBehavior).navHeader = value;
     }
     return _layout;
   }
 
   _setNavFooter(value) {
-    if (_layout != null && (_layout is LayoutNavHeader || _layout is LayoutNavView || _layout is LayoutListCardOver)) {
-      _layout.navFooter = value;
+    if (_layout != null && _layout is LeftNavBehavior) {
+      (_layout as LeftNavBehavior).navFooter = value;
     }
     return _layout;
   }

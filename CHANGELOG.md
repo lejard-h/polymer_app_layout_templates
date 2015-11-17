@@ -1,3 +1,8 @@
+## 0.1.4
+
+### Fix NavHeader when it is custome
+### Use custome theme
+
 ## 0.1.3
 
 ### Fix Demo

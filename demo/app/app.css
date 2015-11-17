@@ -2,14 +2,3 @@ app-demo {
     height: 100%;
 
 }
-
-:root {
-    --paper-drawer-panel-main-container: {
-        background-color: #f5f5f5;
-    };
-
-    --paper-drawer-panel-drawer-container: {
-        background-color: rgb(171, 224, 255);
-    };
-
-}

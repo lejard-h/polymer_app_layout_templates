@@ -9,13 +9,13 @@ Left Nav + View
 
             <div class="nav layout vertical" drawer id="nav">
                 <!-- Nav Content -->
-                <template is="dom-if" if="{{navHeaderIsValid}}">
-                    <polymer-include-element element="[[navHeader]]"></polymer-include-element>
-                </template>
                 <template is="dom-if" if="{{!navHeaderIsValid}}">
                     <paper-toolbar>
                         <span class="title">{{appName}}</span>
                     </paper-toolbar>
+                </template>
+                <template is="dom-if" if="{{navHeaderIsValid}}">
+                    <polymer-include-element element="[[navHeader]]"></polymer-include-element>
                 </template>
                 <paper-menu id="menu" selected="{{visibleMenuIdx}}" valueattr="hash" class="flex">
                     <template is="dom-repeat" items="{{visiblePagesMenu}}">
