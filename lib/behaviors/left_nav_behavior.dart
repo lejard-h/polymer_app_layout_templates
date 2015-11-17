@@ -17,6 +17,7 @@ abstract class LeftNavBehavior {
   HtmlElement get nav => $['nav'];
   PaperDrawerPanel get drawer => $['drawerPanel'];
   String _appName;
+  bool _navHeaderIsValid;
 
   @property
   String get appName => _appName;
@@ -26,30 +27,40 @@ abstract class LeftNavBehavior {
     notifyPath('appName', value);
   }
 
-  @property
-  bool get navHeaderIsValid => navHeader != null && (navHeader is String || navHeader is HtmlElement);
+  @Property(notify: true)
+  bool get navHeaderIsValid {
+    return _navHeaderIsValid;
+  }
+
+  set navHeaderIsValid(bool value) {
+    _navHeaderIsValid = value;
+    notifyPath('navHeaderIsValid', value);
+  }
 
 
   /// Define the element to show in the nav Header.
   /// Can be an [HtmlElement] or the element name as a [String].
 
-  @property
+
+
+  @Property(notify: true)
   get navHeader => _navHeader;
 
-  set navHeader(value) {
-    if (value is String || value is HtmlElement) {
+  void set navHeader(value) {
+    if ((value is String || value is HtmlElement) && value != _navHeader) {
       _navHeader = value;
+      navHeaderIsValid = navHeader is String || navHeader is HtmlElement;
       notifyPath("navHeader", value);
     }
   }
 
   /// Define the element to show in the nav Footer.
   /// Can be an [HtmlElement] or the element name as a [String].
-  @property
+  @Property(notify: true, reflectToAttribute: true)
   get navFooter => _navFooter;
 
-  set navFooter(value) {
-    if (value is String || value is HtmlElement) {
+  void set navFooter(value) {
+    if ((value is String || value is HtmlElement) && value != _navFooter) {
       _navFooter = value;
       notifyPath("navFooter", value);
     }
