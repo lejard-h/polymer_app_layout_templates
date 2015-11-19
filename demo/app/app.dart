@@ -2,6 +2,7 @@
  * Created by lejard_h on 08/10/15.
  */
 
+@HtmlImport("theme.html")
 @HtmlImport("app.html")
 library polymer_app_layout.example.app_demo;
 

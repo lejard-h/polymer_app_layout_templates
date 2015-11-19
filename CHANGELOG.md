@@ -1,3 +1,7 @@
+## 0.1.5
+
+### Fix loading for dart 1.13
+
 ## 0.1.4
 
 ### Fix NavHeader when it is custome

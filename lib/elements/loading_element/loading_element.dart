@@ -17,13 +17,15 @@ class LoadingElement extends PolymerElement {
   HtmlElement get rootElement  => $['main'];
 
   loading(bool state) {
-    if (state && rootElement.style.getPropertyValue("display") == "none") {
-      rootElement.style.setProperty("display", "flex");
-    } else  if (!state && rootElement.style.getPropertyValue("display") != "none") {
-      rootElement.style.setProperty("display", "none");
+    if (state != _isLoading) {
+      if (state && (rootElement.style.getPropertyValue("display") == "none" || rootElement.style.getPropertyValue("display").isEmpty)) {
+        rootElement.style.setProperty("display", "flex");
+      } else if (!state && rootElement.style.getPropertyValue("display") != "none") {
+        rootElement.style.setProperty("display", "none");
+      }
+      _isLoading = state;
+      notifyPath("isLoading", state);
     }
-    _isLoading = state;
-    notifyPath("isLoading", state);
   }
 
   bool _isLoading;
