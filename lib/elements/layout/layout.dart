@@ -223,7 +223,6 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
 
   static loading(bool state, [String message = null]) {
     if (_loading != null) {
-      print(state);
       _loading.message = message;
       _loading.loading(state);
     }
