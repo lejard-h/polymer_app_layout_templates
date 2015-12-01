@@ -27,10 +27,10 @@ import 'package:web_components/web_components.dart' show HtmlImport;
  * Dart Polymer Element
  *
  *      @property
- *      List<Page> get pages => [
- *        new Page("Home", "home", "home-page", isDefault: true),
- *        new Page("One", "one", "page-one"),
- *        new Page("Two", "two", "page-two", menu: false)
+ *      List<AppPage> get pages => [
+ *        new AppPage("Home", "home", "home-page", isDefault: true),
+ *        new AppPage("One", "one", "page-one"),
+ *        new AppPage("Two", "two", "page-two", menu: false)
  *      ];
  *
  *      @property
@@ -40,7 +40,7 @@ import 'package:web_components/web_components.dart' show HtmlImport;
  *
  *      @Listen(PolymerRouteBehavior.page_changed_event)
  *      pageChanged(CustomEventWrapper e, [_]) {
- *        print("page changed => ${(e.detail as Page)}");
+ *        print("page changed => ${(e.detail as AppPage)}");
  *      }
  *
  *      @Listen(PolymerRouteBehavior.path_changed_event)
@@ -65,6 +65,15 @@ class LayoutApp extends PolymerElement with PolymerIncludeElementBehavior {
   static String get layout_nav_header => "layout-nav-header";
 
   static String get layout_list_card_over => "layout-list-card-over";
+
+  /// Event send when the current path change
+  /// Event detail is a [String]
+  static const String path_changed_event = PolymerRouteBehavior.path_changed_event;
+
+
+  /// Event send when the current page change.
+  /// The page is send in event detail.
+  static const String page_changed_event = PolymerRouteBehavior.page_changed_event;
 
   var _navHeader;
   var _navFooter;

@@ -67,7 +67,7 @@ abstract class LeftNavBehavior {
   }
 
   @Observe("selectedPage")
-  selectedPageChanged(Page newValue) {
+  selectedPageChanged(AppPage newValue) {
     if (nav.parent != null) {
       if (newValue.hideLeftNav) {
         nav.parent.style.setProperty("display", "none");
