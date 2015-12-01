@@ -12,7 +12,7 @@ Use the application layout templates provided and start building responsive appl
     
     // route
     @property
-    List<Page> get pages => [
+    List<AppPage> get pages => [
         new AppPage("Home", "home", "home-page", isDefault: true),
         new AppPage("One", "one", "page-one"),
         new AppPage("Two", "two", "page-two", menu: false, hideLeftNav: true)
