@@ -1,6 +1,10 @@
 ## 0.1.5
 
 ### Fix loading for dart 1.13
+### Breaking change
+* Replace Page by AppPage
+### Update demo
+
 
 ## 0.1.4
 

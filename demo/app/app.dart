@@ -23,7 +23,7 @@ class AppDemo extends PolymerElement {
   List<AppPage> get pages => [
         new AppPage("Home", "home", "home-page", isDefault: true),
         new AppPage("One", "one", "page-one"),
-        new AppPage("Two", "two", "page-two", menu: false)
+        new AppPage("Two", "two", "page-two", menu: false, hideLeftNav: true)
       ];
 
   @property
