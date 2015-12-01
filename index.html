@@ -39,10 +39,10 @@ Use the application layout templates provided and start building responsive appl
 
 // route
 @property
-List&lt;Page&gt; get pages =&gt; [
+List&lt;AppPage&gt; get pages =&gt; [
     new AppPage("Home", "home", "home-page", isDefault: true),
     new AppPage("One", "one", "page-one"),
-    new AppPage("Two", "two", "page-two", menu: false)
+    new AppPage("Two", "two", "page-two", menu: false, hideLeftNav: true)
 ];
 
 &lt;layout-app 
@@ -55,23 +55,23 @@ List&lt;Page&gt; get pages =&gt; [
 <a id="navigate" class="anchor" href="#navigate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigate</h3>
 
 <pre><code>gotToHome() {
-    PolymerRouteBehavior.goToDefault();
+    LayoutApp.goToDefaultRoute();
 }
 
 gotToPage(String pageName) {
-    PolymerRouteBehavior.goToName(pageName);
+    LayoutApp.goToRouteName(pageName);
 }
 </code></pre>
 
 <h3>
 <a id="listen-route-change" class="anchor" href="#listen-route-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>Listen route change</h3>
 
-<pre><code>@Listen(PolymerRouteBehavior.page_changed_event)
+<pre><code>@Listen(LayoutApp.page_changed_event)
 pageChanged(CustomEventWrapper e, [_]) {
-    print("page changed =&gt; ${(e.detail as Page)}");
+    print("page changed =&gt; ${(e.detail as AppPage)}");
 }
 
-@Listen(PolymerRouteBehavior.path_changed_event)
+@Listen(LayoutApp.path_changed_event)
 pathChanged(CustomEventWrapper e, [_]) {
     print("path changed =&gt; ${e.detail}");
 }
