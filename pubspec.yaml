@@ -15,6 +15,7 @@ dependencies:
   browser: ^0.10.0
   reflectable: ^0.3.1
   polymer_include_element: "^0.0.5"
+  dart_to_js_script_rewriter: "^0.1.0+4"
 transformers:
 - web_components:
     entry_points:
@@ -25,3 +26,4 @@ transformers:
 - $dart2js:
     minify: true
     commandLineOptions: ['--trust-type-annotations', '--trust-primitives', '--enable-experimental-mirrors']
+- dart_to_js_script_rewriter
