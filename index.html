@@ -29,33 +29,41 @@
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Use <a href="https://github.com/lejard-h/polymer_route_behavior">polymer_route_behavior</a> to implement routing.</p>
-
-<p>awesome_polymer_element.dart:</p>
+<h3>
+<a id="define-pages-routing" class="anchor" href="#define-pages-routing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Define pages routing</h3>
 
 <pre><code>import 'package:polymer_app_layout_template/app_layout.dart'';
-
-...
 
 // route
 @property
 List&lt;Page&gt; get pages =&gt; [
-    new Page("Home", "home", "home-page", isDefault: true),
-    new Page("One", "one", "page-one"),
-    new Page("Two", "two", "page-two", menu: false)
+    new AppPage("Home", "home", "home-page", isDefault: true),
+    new AppPage("One", "one", "page-one"),
+    new AppPage("Two", "two", "page-two", menu: false)
 ];
 
-...
+&lt;layout-app 
+    pages="{{pages}}" 
+    layout-type="layout-nav-view"&gt;
+&lt;/layout-app&gt;
+</code></pre>
 
-// toolbar
-@property
-List get toolbarItems =&gt; [
-    'toolbar-more-button' // or document.createElement('toolbar-more-button');
-];
+<h3>
+<a id="navigate" class="anchor" href="#navigate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigate</h3>
 
-...
+<pre><code>gotToHome() {
+    PolymerRouteBehavior.goToDefault();
+}
 
-@Listen(PolymerRouteBehavior.page_changed_event)
+gotToPage(String pageName) {
+    PolymerRouteBehavior.goToName(pageName);
+}
+</code></pre>
+
+<h3>
+<a id="listen-route-change" class="anchor" href="#listen-route-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>Listen route change</h3>
+
+<pre><code>@Listen(PolymerRouteBehavior.page_changed_event)
 pageChanged(CustomEventWrapper e, [_]) {
     print("page changed =&gt; ${(e.detail as Page)}");
 }
@@ -64,21 +72,33 @@ pageChanged(CustomEventWrapper e, [_]) {
 pathChanged(CustomEventWrapper e, [_]) {
     print("path changed =&gt; ${e.detail}");
 }
-
-gotToHome() {
-    PolymerRouteBehavior.goToDefault();
-}
-
-gotToPage(String pageName) {
-    PolymerRouteBehavior.goToName(pageName);
-}
-
-...
 </code></pre>
 
-<p>awesome_polymer_element.html:</p>
+<h3>
+<a id="define-toolbar-nav-header-nav-footer" class="anchor" href="#define-toolbar-nav-header-nav-footer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Define Toolbar, nav-header, nav-footer</h3>
 
-<pre><code> &lt;layout-app pages="{{pages}}" toolbar-items="{{toolbarItems}}" layout-type="layout-nav-header"&gt;&lt;/layout-app&gt;
+<pre><code>// toolbar
+@property
+List get toolbarItems =&gt; [
+    'toolbar-more-button' // or document.createElement('toolbar-more-button');
+];
+
+// header
+@property
+HtmlElement get header =&gt; document.createElement("nav-header");
+
+//footer
+@property
+String get footer =&gt; "nav-footer"
+
+
+&lt;layout-app 
+    pages="{{pages}}" 
+    toolbar-items="{{toolbarItems}}" 
+    layout-type="layout-nav-header" 
+    nav-header="{{header}}" 
+    nav-footer="{{footer}}"&gt;
+&lt;/layout-app&gt;
 </code></pre>
 
 <p>The element field accept any HtmlElement.</p>
