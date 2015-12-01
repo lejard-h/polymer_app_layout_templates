@@ -4,7 +4,6 @@ Polymer application template with responsive Material Design and routing
 Use the application layout templates provided and start building responsive applications.
 
 ## Usage
-Use [polymer_route_behavior](https://github.com/lejard-h/polymer_route_behavior) to implement routing.
 
 ### Define pages routing
 
