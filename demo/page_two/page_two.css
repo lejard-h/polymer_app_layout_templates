@@ -1,0 +1,12 @@
+paper-material {
+    margin: 10px;
+    background-color: white;
+}
+
+#page-two {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #efefef;
+    z-index: 10;
+}

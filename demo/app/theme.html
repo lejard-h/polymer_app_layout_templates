@@ -1,0 +1,48 @@
+<html><head></head><body><dom-module id="theme">
+    <template>
+        <style>
+            :root {
+
+                --dark-primary-color: #3d3d3d;
+                --dark-secondary-color: #bdbdbd;
+                --default-primary-color: #e8643e;
+                --light-primary-color: #f5f5f5;
+                --primary-background-color: #ffffff;
+                --divider-color: #f9f9f9;
+                --error-color: #D32F2F;
+                --success-color: #4CAF50;
+                --text-primary-color: var(--default-primary-color);
+                --accent-color: var(--default-primary-color);
+                --secondary-background-color: var(--light-primary-color);
+                --primary-text-color: var(--default-primary-color);
+                --secondary-text-color: var(--dark-primary-color);
+                --disabled-text-color: var(--dark-secondary-color);
+                --paper-tabs-selection-bar-color: var(--default-primary-color);
+                --paper-tab-ink: var(--default-primary-color);
+                --paper-tab: var(--default-primary-color);
+                --paper-toolbar-background: var(--primary-background-color);
+                --paper-menu-background-color: var(--dark-primary-color);
+                --paper-menu-color: white;
+                --toast-error-color: var(--error-color);
+                --toast-success-color: var(--success-color);
+
+                --paper-drawer-panel-left-drawer-container: {
+                    background-color: var(--dark-primary-color);
+                };
+            }
+
+            :host {
+                font-family: 'Roboto', 'Noto', sans-serif;
+                font-weight: 300;
+                height: 100%;
+                background-color: var(--secondary-background-color);
+                --paper-toolbar-background: var(--primary-background-color);
+                --paper-tab-ink: var(--default-primary-color);
+                --paper-tabs-selection-bar-color: var(--default-primary-color);
+            }
+
+
+        </style>
+    </template>
+</dom-module>
+</body></html>

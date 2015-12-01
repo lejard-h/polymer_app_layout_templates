@@ -1,0 +1,34 @@
+:host {
+    display: block;
+}
+
+.main-panel[mode=cover] .content {
+    padding: 0 64px 0 4px;
+}
+
+.main-panel {
+    --paper-header-panel-cover-container: {
+        left: 64px;
+    };
+}
+
+.main-panel[mode=cover] paper-material {
+    max-width: 640px;
+    margin: 64px auto;
+}
+
+section {
+    height: 100%;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+iron-icon {
+    margin-right: 16px;
+}
+
+paper-menu {
+    background-color: transparent;
+}
