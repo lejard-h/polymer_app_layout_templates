@@ -1,7 +1,8 @@
 # polymer_app_layout_templates
 Polymer application template with responsive Material Design and routing
-
 Use the application layout templates provided and start building responsive applications.
+
+## [Demo](http://lejard-h.github.io/polymer_app_layout_templates/demo)
 
 ## Usage
 
@@ -14,7 +15,7 @@ Use the application layout templates provided and start building responsive appl
     List<Page> get pages => [
         new AppPage("Home", "home", "home-page", isDefault: true),
         new AppPage("One", "one", "page-one"),
-        new AppPage("Two", "two", "page-two", menu: false)
+        new AppPage("Two", "two", "page-two", menu: false, hideLeftNav: true)
     ];
     
     <layout-app 
@@ -25,21 +26,21 @@ Use the application layout templates provided and start building responsive appl
 ### Navigate
 
     gotToHome() {
-        PolymerRouteBehavior.goToDefault();
+        LayoutApp.goToDefaultRoute();
     }
-    
+
     gotToPage(String pageName) {
-        PolymerRouteBehavior.goToName(pageName);
+        LayoutApp.goToRouteName(pageName);
     }
     
 ### Listen route change 
     
-    @Listen(PolymerRouteBehavior.page_changed_event)
+    @Listen(LayoutApp.page_changed_event)
     pageChanged(CustomEventWrapper e, [_]) {
-        print("page changed => ${(e.detail as Page)}");
+        print("page changed => ${(e.detail as AppPage)}");
     }
     
-    @Listen(PolymerRouteBehavior.path_changed_event)
+    @Listen(LayoutApp.path_changed_event)
     pathChanged(CustomEventWrapper e, [_]) {
         print("path changed => ${e.detail}");
     }
@@ -74,7 +75,7 @@ The element field accept any HtmlElement.
 
 [Working example](https://github.com/lejard-h/polymer_app_layout_templates/tree/master/demo)
 
-## Templates:
+## Templates
 
 [Left Nav + View](http://polymerelements.github.io/app-layout-templates/nav-view/index.html)
 
