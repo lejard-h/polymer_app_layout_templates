@@ -2,6 +2,7 @@
  * Created by lejard_h on 08/10/15.
  */
 
+@HtmlImport("theme.html")
 @HtmlImport("app.html")
 library polymer_app_layout.example.app_demo;
 
@@ -14,16 +15,15 @@ import 'package:polymer_elements/paper_icon_button.dart';
 import 'package:polymer_elements/paper_menu.dart';
 import 'package:polymer_elements/paper_item.dart';
 
-
 @PolymerRegister('app-demo')
 class AppDemo extends PolymerElement {
   AppDemo.created() : super.created();
 
   @property
-  List<Page> get pages => [
-        new Page("Home", "home", "home-page", isDefault: true),
-        new Page("One", "one", "page-one"),
-        new Page("Two", "two", "page-two", menu: false)
+  List<AppPage> get pages => [
+        new AppPage("Home", "home", "home-page", isDefault: true),
+        new AppPage("One", "one", "page-one"),
+        new AppPage("Two", "two", "page-two", menu: false, hideLeftNav: true)
       ];
 
   @property
@@ -31,21 +31,21 @@ class AppDemo extends PolymerElement {
         'toolbar-more-button' // or document.createElement('toolbar-more-button');
       ];
 
-  @Listen(PolymerRouteBehavior.page_changed_event)
+  @Listen(LayoutApp.page_changed_event)
   pageChanged(CustomEventWrapper e, [_]) {
-    print("page changed => ${(e.detail as Page)}");
+    print("page changed => ${(e.detail as AppPage)}");
   }
 
-  @Listen(PolymerRouteBehavior.path_changed_event)
+  @Listen(LayoutApp.path_changed_event)
   pathChanged(CustomEventWrapper e, [_]) {
     print("path changed => ${e.detail}");
   }
 
   gotToHome() {
-    PolymerRouteBehavior.goToDefault();
+    LayoutApp.goToDefaultRoute();
   }
 
   gotToPage(String pageName) {
-    PolymerRouteBehavior.goToName(pageName);
+    LayoutApp.goToRouteName(pageName);
   }
 }

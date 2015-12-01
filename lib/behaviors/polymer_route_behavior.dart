@@ -27,17 +27,17 @@ abstract class PolymerRouteBehavior {
   /// The page is send in event detail.
   static const String page_changed_event = "current-page-changed";
 
-  List<Page> _visiblePagesMenu;
-  List<Page> _childPages;
-  List<Page> _pages;
-  Page _selectedPage;
+  List<AppPage> _visiblePagesMenu;
+  List<AppPage> _childPages;
+  List<AppPage> _pages;
+  AppPage _selectedPage;
   int _visibleMenuIdx;
   String _currentPath;
   String _currentName;
   int _routeIdx;
   bool _useFragment = true;
 
-  /// Go to the default Page
+  /// Go to the default AppPage
   @reflectable
   static goToDefault([Map params]) {
     if (params == null) {
@@ -59,12 +59,12 @@ abstract class PolymerRouteBehavior {
 
   resetRoute() {
     router = new Router(useFragment: useFragment);
-    _visiblePagesMenu = new List<Page>();
-    _childPages = new List<Page>();
+    _visiblePagesMenu = new List<AppPage>();
+    _childPages = new List<AppPage>();
     if (pages != null) {
       pages.forEach((page) {
         router.root.addRoute(name: page.name, path: page.path, defaultRoute: page.isDefault, enter: enterRoute);
-        Page _page = page;
+        AppPage _page = page;
         while (_page != null && _page.child != null) {
           _page = _page.child;
           _childPages.add(_page);
@@ -112,15 +112,15 @@ abstract class PolymerRouteBehavior {
   String get currentPath => _currentPath;
 
   @property
-  List<Page> get visiblePagesMenu => _visiblePagesMenu;
+  List<AppPage> get visiblePagesMenu => _visiblePagesMenu;
 
-  /// Current Page
+  /// Current AppPage
   @property
-  Page get selectedPage => _selectedPage;
+  AppPage get selectedPage => _selectedPage;
 
   /// Pages config
   @property
-  List<Page> get pages => _pages;
+  List<AppPage> get pages => _pages;
 
   @property
   int get routeIdx => _routeIdx;
@@ -138,12 +138,12 @@ abstract class PolymerRouteBehavior {
     notifyPath('useFragment', value);
   }
 
-  void set visiblePagesMenu(List<Page> newConfig) {
+  void set visiblePagesMenu(List<AppPage> newConfig) {
     _visiblePagesMenu = newConfig;
     notifyPath('visiblePagesMenu', _visiblePagesMenu);
   }
 
-  void set pages(List<Page> newConfig) {
+  void set pages(List<AppPage> newConfig) {
     _pages = newConfig;
     resetRoute();
     notifyPath('config', _pages);
@@ -175,7 +175,7 @@ abstract class PolymerRouteBehavior {
     notifyPath('routeIdx', _routeIdx);
   }
 
-  void set selectedPage(Page value) {
+  void set selectedPage(AppPage value) {
     if (value != null && _selectedPage != value) {
       routeIdx = pages.indexOf(pages.firstWhere((item) => isSamePath(item.path, value.path) && item.element != null));
     }

@@ -4,31 +4,35 @@ Polymer application template with responsive Material Design and routing
 Use the application layout templates provided and start building responsive applications.
 
 ## Usage
-Use [polymer_route_behavior](https://github.com/lejard-h/polymer_route_behavior) to implement routing.
 
-awesome_polymer_element.dart:
+### Define pages routing
 
     import 'package:polymer_app_layout_template/app_layout.dart'';
-    
-    ...
     
     // route
     @property
     List<Page> get pages => [
-        new Page("Home", "home", "home-page", isDefault: true),
-        new Page("One", "one", "page-one"),
-        new Page("Two", "two", "page-two", menu: false)
+        new AppPage("Home", "home", "home-page", isDefault: true),
+        new AppPage("One", "one", "page-one"),
+        new AppPage("Two", "two", "page-two", menu: false)
     ];
     
-    ...
+    <layout-app 
+        pages="{{pages}}" 
+        layout-type="layout-nav-view">
+    </layout-app>
     
-    // toolbar
-    @property
-    List get toolbarItems => [
-        'toolbar-more-button' // or document.createElement('toolbar-more-button');
-    ];
+### Navigate
+
+    gotToHome() {
+        PolymerRouteBehavior.goToDefault();
+    }
     
-    ...
+    gotToPage(String pageName) {
+        PolymerRouteBehavior.goToName(pageName);
+    }
+    
+### Listen route change 
     
     @Listen(PolymerRouteBehavior.page_changed_event)
     pageChanged(CustomEventWrapper e, [_]) {
@@ -40,20 +44,32 @@ awesome_polymer_element.dart:
         print("path changed => ${e.detail}");
     }
     
-    gotToHome() {
-        PolymerRouteBehavior.goToDefault();
-    }
+### Define Toolbar, nav-header, nav-footer
     
-    gotToPage(String pageName) {
-        PolymerRouteBehavior.goToName(pageName);
-    }
+    // toolbar
+    @property
+    List get toolbarItems => [
+        'toolbar-more-button' // or document.createElement('toolbar-more-button');
+    ];
     
-    ...
+    // header
+    @property
+    HtmlElement get header => document.createElement("nav-header");
     
-awesome_polymer_element.html:
+    //footer
+    @property
+    String get footer => "nav-footer"
+       
     
-     <layout-app pages="{{pages}}" toolbar-items="{{toolbarItems}}" layout-type="layout-nav-header"></layout-app>
-    
+    <layout-app 
+        pages="{{pages}}" 
+        toolbar-items="{{toolbarItems}}" 
+        layout-type="layout-nav-header" 
+        nav-header="{{header}}" 
+        nav-footer="{{footer}}">
+    </layout-app>
+ 
+  
 The element field accept any HtmlElement.
 
 [Working example](https://github.com/lejard-h/polymer_app_layout_templates/tree/master/demo)
