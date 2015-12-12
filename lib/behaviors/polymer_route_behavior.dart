@@ -68,7 +68,7 @@ abstract class PolymerRouteBehavior {
         while (_page != null && _page.child != null) {
           _page = _page.child;
           _childPages.add(_page);
-          router.root.addRoute(name: _page.name, path: _page.path, defaultRoute: _page.isDefault, enter: enterRoute);
+          router.root.addRoute(name: _page.name, path: _page.path, /*defaultRoute: _page.isDefault,*/ enter: enterRoute);
         }
         if (page.menu && page.element != null) {
           _visiblePagesMenu.add(page);
