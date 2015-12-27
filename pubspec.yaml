@@ -1,5 +1,5 @@
 name: polymer_app_layout_template
-version: 0.1.6
+version: 0.1.7
 description: Polymer application template with responsive Material Design and routing
 author: Hadrien Lejard <hadrien.lejard@gmail.com>
 homepage: https://github.com/lejard-h/polymer-app-layout-templates
@@ -14,8 +14,13 @@ dependencies:
   web_components: "^0.12.0"
   browser: "^0.10.0"
   reflectable: "^0.5.1"
-  polymer_include_element: "^0.0.7"
+  polymer_include_element: "^0.0.8"
   dart_to_js_script_rewriter: "^0.1.0+4"
+
+dependency_overrides:
+  polymer_include_element:
+    path: /Users/lejard_h/github/polymer_include_element
+
 transformers:
 - web_components:
     entry_points:
