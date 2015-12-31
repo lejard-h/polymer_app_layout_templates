@@ -1,3 +1,5 @@
+# Migrating to [polymer_app](https://github.com/lejard-h/polymer_app)
+
 # polymer_app_layout_templates
 Polymer application template with responsive Material Design and routing
 Use the application layout templates provided and start building responsive applications.
